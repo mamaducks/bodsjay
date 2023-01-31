@@ -3,13 +3,15 @@ import circJaya from "./circjaya.png";
 import grimgJaya from "./grimgjaya.png";
 
 import "./App.css";
-import { Box, Stack } from "@mui/system";
+import { Box } from "@mui/system";
 import {
   AppBar,
   Card,
   CardContent,
   Container,
   Divider,
+  Stack,
+  Toolbar,
   Typography,
 } from "@mui/material";
 
@@ -19,7 +21,17 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import EmailIcon from "@mui/icons-material/Email";
 
-import { LgBar, SmallBar } from "./AppBar";
+
+import leaf from "./loveLeaf.png";
+import CloseIcon from "@mui/icons-material/Close";
+import SearchIcon from "@mui/icons-material/Search";
+import {
+  ShowSmall,
+  NoShowSmall,
+  
+} from "./MediaBox.jsx";
+import { React, useState } from "react";
+import { AppBarButton } from "./AppBarButton";
 
 // const styles = {
 //   container: {
@@ -47,9 +59,92 @@ import { LgBar, SmallBar } from "./AppBar";
 function App() {
   return (
     <>
-      <SmallBar />
+      <ShowSmall>
+        <AppBar
+          position="fixed"
+          sx={{ backgroundColor: "#101010", justifyContent: "space-between" }}
+        >
+          <Toolbar>
+            <Box flexGrow={1}>
+              <Stack direction="row" gap={1}>
+                <img src={leaf} alt="logo" height={28} width={28} />
+                {/* <Link href={`/`} sx={{ textDecoration: "none" }}> */}
+                <Typography variant="h4">Body by Jaya</Typography>
+                {/* </Link> */}
+              </Stack>
+            </Box>
 
-      <LgBar />
+            <Stack
+              direction="row"
+              sx={{ alignSelf: "center", alignItems: "center" }}
+            >
+              <AppBarButton />
+            </Stack>
+          </Toolbar>
+        </AppBar>
+      </ShowSmall>
+
+      <NoShowSmall>
+      <AppBar position="fixed">
+        <Toolbar>
+          <Box flexGrow={1}>
+            {/* <Link href={`/`} sx={{ textDecoration: "none" }}> */}
+              <Stack direction="row" gap={1}>
+                {/* <img src={leaf} alt="logo" height={40} width={40} /> */}
+
+                <Typography
+                  variant="h4"
+                  sx={{
+                    minWidth: "max-content",
+                    alignSelf: "flex-end",
+                    paddingBottom: 1,
+                    paddingLeft: 3,
+                    fontWeight: "bold",
+                    fontFamily: "Ms Madi",
+                    // fontFamily: " 'Poppins', sans-serif",
+                    color: "#197982",
+                  }}
+                >
+                  Body
+                </Typography>
+                <Typography>by Jaya</Typography>
+              </Stack>
+            {/* </Link> */}
+          </Box>
+
+          <Stack direction="row" gap={2}>
+            <Box alignSelf="center">
+              <AppBarButton />
+            </Box>
+          </Stack>
+
+          {/* <div>
+              <StyledCenterStack
+                direction="row"
+                justifyContent="flex-end"
+                gap={1}
+                flexGrow={1}
+              >
+                
+
+                <Avatar>
+                  <YouTubeIcon />
+                </Avatar>
+                <Avatar>
+                  <InstagramIcon />
+                </Avatar>
+                <Avatar>
+                  <PinterestIcon />
+                </Avatar>
+                <Avatar>
+                  <TwitterIcon />
+                </Avatar>
+              </StyledCenterStack>
+            </div> */}
+        </Toolbar>
+      </AppBar>
+    </NoShowSmall>
+
 
       <Container>
         <Container>
@@ -64,7 +159,6 @@ function App() {
               marginBottom: "10px",
             }}
           >
-
             {/* <Grid> */}
 
             <Box
@@ -343,86 +437,86 @@ function App() {
         </Stack>
 
         <Container>
-      <CardContent>
-        <Stack direction="row" justifyContent="space-evenly">
-          <div>
-            <div>Hours</div>
-            <Stack direction="row" gap={2}>
-              <Typography color="textPrimary" gutterBottom>
-                Monday:
-              </Typography>
-              <Typography color="textSecondary">Closed</Typography>
+          <CardContent>
+            <Stack direction="row" justifyContent="space-evenly">
+              <div>
+                <div>Hours</div>
+                <Stack direction="row" gap={2}>
+                  <Typography color="textPrimary" gutterBottom>
+                    Monday:
+                  </Typography>
+                  <Typography color="textSecondary">Closed</Typography>
+                </Stack>
+
+                <Stack direction="row" gap={2}>
+                  <Typography color="textPrimary" gutterBottom>
+                    Tuesday:
+                  </Typography>
+                  <Typography color="textSecondary">Closed</Typography>
+                </Stack>
+
+                <Stack direction="row" gap={2}>
+                  <Typography color="textPrimary" gutterBottom>
+                    Wednesday:
+                  </Typography>
+                  <Typography color="textSecondary">3pm - 7pm</Typography>
+                </Stack>
+                <Stack direction="row" gap={2}>
+                  <Typography color="textPrimary" gutterBottom>
+                    Thursday:
+                  </Typography>
+                  <Typography color="textSecondary">4pm - 7pm</Typography>
+                </Stack>
+
+                <Stack direction="row" gap={2}>
+                  <Typography color="textPrimary" gutterBottom>
+                    Friday:
+                  </Typography>
+                  <Typography color="textSecondary">9am - 3pm</Typography>
+                </Stack>
+                <Stack direction="row" gap={2}>
+                  <Typography color="textPrimary" gutterBottom>
+                    Saturday:
+                  </Typography>
+                  <Typography color="textSecondary">9am - 3pm</Typography>
+                </Stack>
+
+                <Stack direction="row" gap={2}>
+                  <Typography color="textPrimary" gutterBottom>
+                    Sunday:
+                  </Typography>
+                  <Typography color="textSecondary">9am - 3pm</Typography>
+                </Stack>
+              </div>
+
+              <div>
+                <div>Contact</div>
+
+                <Typography color="textPrimary" gutterBottom>
+                  Personalized body sculpting
+                </Typography>
+                <Typography color="textSecondary">+856-357-5954</Typography>
+
+                <Typography color="textPrimary" gutterBottom>
+                  bodybyjaya@gmail.com
+                </Typography>
+
+                <Typography color="textSecondary">
+                  <a href="https://www.facebook.com/Home-Inspections-105580485123207/">
+                    <FacebookIcon color="black" />
+                  </a>
+                  @bodybyjaya
+                  <a
+                    href="https://www.instagram.com/buyerbewarehomeinspections"
+                    className="instagram social"
+                  >
+                    <InstagramIcon color="black" />
+                  </a>
+                  @bodybyjaya
+                </Typography>
+              </div>
             </Stack>
-
-            <Stack direction="row" gap={2}>
-              <Typography color="textPrimary" gutterBottom>
-                Tuesday:
-              </Typography>
-              <Typography color="textSecondary">Closed</Typography>
-            </Stack>
-
-            <Stack direction="row" gap={2}>
-              <Typography color="textPrimary" gutterBottom>
-                Wednesday:
-              </Typography>
-              <Typography color="textSecondary">3pm - 7pm</Typography>
-            </Stack>
-            <Stack direction="row" gap={2}>
-              <Typography color="textPrimary" gutterBottom>
-                Thursday:
-              </Typography>
-              <Typography color="textSecondary">4pm - 7pm</Typography>
-            </Stack>
-
-            <Stack direction="row" gap={2}>
-              <Typography color="textPrimary" gutterBottom>
-                Friday:
-              </Typography>
-              <Typography color="textSecondary">9am - 3pm</Typography>
-            </Stack>
-            <Stack direction="row" gap={2}>
-              <Typography color="textPrimary" gutterBottom>
-                Saturday:
-              </Typography>
-              <Typography color="textSecondary">9am - 3pm</Typography>
-            </Stack>
-
-            <Stack direction="row" gap={2}>
-              <Typography color="textPrimary" gutterBottom>
-                Sunday:
-              </Typography>
-              <Typography color="textSecondary">9am - 3pm</Typography>
-            </Stack>
-          </div>
-
-          <div>
-            <div>Contact</div>
-
-            <Typography color="textPrimary" gutterBottom>
-              Personalized body sculpting
-            </Typography>
-            <Typography color="textSecondary">+856-357-5954</Typography>
-
-            <Typography color="textPrimary" gutterBottom>
-              bodybyjaya@gmail.com
-            </Typography>
-
-            <Typography color="textSecondary">
-              <a href="https://www.facebook.com/Home-Inspections-105580485123207/">
-                <FacebookIcon color="black" />
-              </a>
-              @bodybyjaya
-              <a
-                href="https://www.instagram.com/buyerbewarehomeinspections"
-                className="instagram social"
-              >
-                <InstagramIcon color="black" />
-              </a>
-              @bodybyjaya
-            </Typography>
-          </div>
-        </Stack>
-        </CardContent>
+          </CardContent>
         </Container>
 
         {/* <CardContent>
@@ -456,125 +550,125 @@ function App() {
             </a>
           </Box>
         </CardContent> */}
-  <Box alignSelf="center" paddingTop="5px">
-        <CardContent style={{ padding: "0px" }}>
-          <Typography
-            color="textPrimary"
-            variant="h5"
-            gutterBottom
-            style={{ alignItems: "center", flexWrap: "nowrap" }}
-          >
-            Have any questions? We'd
-            <FavoriteIcon
-              fontSize="1.1rem"
-              // color="#a71976"
-              style={{ paddingInline: "8px" }}
-            />
-            to hear from you!
-          </Typography>
+        <Box alignSelf="center" paddingTop="5px">
+          <CardContent style={{ padding: "0px" }}>
+            <Typography
+              color="textPrimary"
+              variant="h5"
+              gutterBottom
+              style={{ alignItems: "center", flexWrap: "nowrap" }}
+            >
+              Have any questions? We'd
+              <FavoriteIcon
+                fontSize="1.1rem"
+                // color="#a71976"
+                style={{ paddingInline: "8px" }}
+              />
+              to hear from you!
+            </Typography>
 
-          <Divider />
-        </CardContent>
-      </Box>
+            <Divider />
+          </CardContent>
+        </Box>
 
         <>
-      <AppBar position="sticky" elevation={0}>
-        <Box
-          display="flex"
-          // color="#a71976"
-          color="#123754"
-          alignItems="center"
-          flexWrap="wrap"
-          // alignContent="center"
-        >
-          <Box textAlign="center" flex="auto" paddingTop="10px">
-            <Typography
-              variant="subtitle1"
-              paddingTop="8px"
-              paddingBottom="1px"
-              gutterBottom
+          <AppBar position="sticky" elevation={0}>
+            <Box
+              display="flex"
+              // color="#a71976"
+              color="#123754"
+              alignItems="center"
+              flexWrap="wrap"
+              // alignContent="center"
             >
-              Body by Jaya
-            </Typography>
-          </Box>
+              <Box textAlign="center" flex="auto" paddingTop="10px">
+                <Typography
+                  variant="subtitle1"
+                  paddingTop="8px"
+                  paddingBottom="1px"
+                  gutterBottom
+                >
+                  Body by Jaya
+                </Typography>
+              </Box>
 
-          <Box
-            // margin="5px"
-            display="flex"
-            flex="auto"
-            alignItems="center"
-            style={{ justifyContent: "center" }}
-          ></Box>
-
-          <div
-            style={{
-              display: "flex",
-              flex: "auto",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <PhoneAndroidIcon />text="1-609-670-0451" 
-            <Typography
-              variant="body1"
-              sx={{
-                display: "flex",
-                // color: '#c54097',
-                color: "#123754",
-              }}
-            >
               <Box
-                sx={{
-                  paddingInline: "8px",
+                // margin="5px"
+                display="flex"
+                flex="auto"
+                alignItems="center"
+                style={{ justifyContent: "center" }}
+              ></Box>
+
+              <div
+                style={{
                   display: "flex",
+                  flex: "auto",
+                  flexDirection: "column",
                   alignItems: "center",
-                  fontSize: "1.1em",
-                  // color: '#c54097',
-                  color: "#4687b6",
                 }}
               >
                 <PhoneAndroidIcon />
-              </Box>
-              number
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{
-                display: "flex",
-                // color: '#c54097',
-                color: "#123754",
-              }}
-            >
-              <Box
-                sx={{
-                  paddingInline: "8px",
-                  display: "flex",
-                  alignItems: "center",
-                  fontSize: "1.1em",
-                  // color: '#c54097',
-                  color: "#4687b6",
-                }}
-              >
-                <Box
+                text="1-609-670-0451"
+                <Typography
+                  variant="body1"
                   sx={{
-                    paddingInline: "8px",
                     display: "flex",
-                    alignItems: "center",
-                    fontSize: "1.1em",
                     // color: '#c54097',
-                    color: "#4687b6",
+                    color: "#123754",
                   }}
                 >
-                  <EmailIcon />
-                </Box>
-              </Box>
-              Send us an email
-            </Typography>
-          </div>
-        </Box>
-      </AppBar>
-    </>
-
+                  <Box
+                    sx={{
+                      paddingInline: "8px",
+                      display: "flex",
+                      alignItems: "center",
+                      fontSize: "1.1em",
+                      // color: '#c54097',
+                      color: "#4687b6",
+                    }}
+                  >
+                    <PhoneAndroidIcon />
+                  </Box>
+                  number
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    display: "flex",
+                    // color: '#c54097',
+                    color: "#123754",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      paddingInline: "8px",
+                      display: "flex",
+                      alignItems: "center",
+                      fontSize: "1.1em",
+                      // color: '#c54097',
+                      color: "#4687b6",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        paddingInline: "8px",
+                        display: "flex",
+                        alignItems: "center",
+                        fontSize: "1.1em",
+                        // color: '#c54097',
+                        color: "#4687b6",
+                      }}
+                    >
+                      <EmailIcon />
+                    </Box>
+                  </Box>
+                  Send us an email
+                </Typography>
+              </div>
+            </Box>
+          </AppBar>
+        </>
       </Container>
     </>
   );
