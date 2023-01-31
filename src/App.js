@@ -1,13 +1,11 @@
-import logo from "./logo.svg";
 import shapesBod from "./shapesbod.png";
 import circJaya from "./circjaya.png";
 import grimgJaya from "./grimgjaya.png";
 
 import "./App.css";
 import { Box, Stack } from "@mui/system";
-import Grid from "@mui/system/Unstable_Grid/Grid";
 import {
-  Button,
+  AppBar,
   Card,
   CardContent,
   Container,
@@ -17,11 +15,11 @@ import {
 
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
+import EmailIcon from "@mui/icons-material/Email";
 
-import { HomeHeader } from "./HomeHeader.js";
 import { LgBar, SmallBar } from "./AppBar";
-import { Contact } from "./Contact";
-import { Footer } from "./Footer";
 
 // const styles = {
 //   container: {
@@ -65,15 +63,11 @@ function App() {
               height: "100vh",
               marginBottom: "10px",
             }}
-            // className="App"
           >
-            {/* <HomeHeader/> */}
 
-            {/* <Container style={styles.container}> */}
             {/* <Grid> */}
 
             <Box
-              // style={styles.box}
               style={{
                 position: "absolute",
                 top: "45%",
@@ -348,7 +342,8 @@ function App() {
           </p>
         </Stack>
 
-        <Contact />
+        <Container>
+      <CardContent>
         <Stack direction="row" justifyContent="space-evenly">
           <div>
             <div>Hours</div>
@@ -427,6 +422,8 @@ function App() {
             </Typography>
           </div>
         </Stack>
+        </CardContent>
+        </Container>
 
         {/* <CardContent>
           <Box
@@ -459,7 +456,125 @@ function App() {
             </a>
           </Box>
         </CardContent> */}
-        <Footer />
+  <Box alignSelf="center" paddingTop="5px">
+        <CardContent style={{ padding: "0px" }}>
+          <Typography
+            color="textPrimary"
+            variant="h5"
+            gutterBottom
+            style={{ alignItems: "center", flexWrap: "nowrap" }}
+          >
+            Have any questions? We'd
+            <FavoriteIcon
+              fontSize="1.1rem"
+              // color="#a71976"
+              style={{ paddingInline: "8px" }}
+            />
+            to hear from you!
+          </Typography>
+
+          <Divider />
+        </CardContent>
+      </Box>
+
+        <>
+      <AppBar position="sticky" elevation={0}>
+        <Box
+          display="flex"
+          // color="#a71976"
+          color="#123754"
+          alignItems="center"
+          flexWrap="wrap"
+          // alignContent="center"
+        >
+          <Box textAlign="center" flex="auto" paddingTop="10px">
+            <Typography
+              variant="subtitle1"
+              paddingTop="8px"
+              paddingBottom="1px"
+              gutterBottom
+            >
+              Body by Jaya
+            </Typography>
+          </Box>
+
+          <Box
+            // margin="5px"
+            display="flex"
+            flex="auto"
+            alignItems="center"
+            style={{ justifyContent: "center" }}
+          ></Box>
+
+          <div
+            style={{
+              display: "flex",
+              flex: "auto",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <PhoneAndroidIcon />text="1-609-670-0451" 
+            <Typography
+              variant="body1"
+              sx={{
+                display: "flex",
+                // color: '#c54097',
+                color: "#123754",
+              }}
+            >
+              <Box
+                sx={{
+                  paddingInline: "8px",
+                  display: "flex",
+                  alignItems: "center",
+                  fontSize: "1.1em",
+                  // color: '#c54097',
+                  color: "#4687b6",
+                }}
+              >
+                <PhoneAndroidIcon />
+              </Box>
+              number
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{
+                display: "flex",
+                // color: '#c54097',
+                color: "#123754",
+              }}
+            >
+              <Box
+                sx={{
+                  paddingInline: "8px",
+                  display: "flex",
+                  alignItems: "center",
+                  fontSize: "1.1em",
+                  // color: '#c54097',
+                  color: "#4687b6",
+                }}
+              >
+                <Box
+                  sx={{
+                    paddingInline: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    fontSize: "1.1em",
+                    // color: '#c54097',
+                    color: "#4687b6",
+                  }}
+                >
+                  <EmailIcon />
+                </Box>
+              </Box>
+              Send us an email
+            </Typography>
+          </div>
+        </Box>
+      </AppBar>
+    </>
+
       </Container>
     </>
   );

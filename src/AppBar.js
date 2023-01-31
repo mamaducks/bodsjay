@@ -1,13 +1,4 @@
-import {
-  AppBar,
-  Button,
-  Link,
-  Stack,
-  Toolbar,
-  Typography,
-  OutlinedInput,
-  IconButton,
-} from "@mui/material";
+import { AppBar, Link, Stack, Toolbar, Typography } from "@mui/material";
 import leaf from "./loveLeaf.png";
 import { Box } from "@mui/system";
 import CloseIcon from "@mui/icons-material/Close";
@@ -21,8 +12,6 @@ import {
 import { React, useState } from "react";
 import { AppBarButton } from "./AppBarButton";
 
-
-
 export function LgBar() {
   const [query, setQuery] = useState("");
 
@@ -34,39 +23,32 @@ export function LgBar() {
             <Link href={`/`} sx={{ textDecoration: "none" }}>
               <Stack direction="row" gap={1}>
                 {/* <img src={leaf} alt="logo" height={40} width={40} /> */}
-                
-                <Typography variant="h4" sx={{ minWidth: "max-content", alignSelf: "flex-end",
-    paddingBottom: 1,
-    paddingLeft: 3,
-    fontWeight: "bold",
-    fontFamily:"Ms Madi",
-    // fontFamily: " 'Poppins', sans-serif",
-    color: "#197982", }}>
-                Body 
-                
-                </Typography>
-<Typography>
-                  by Jaya
-                  </Typography>
 
+                <Typography
+                  variant="h4"
+                  sx={{
+                    minWidth: "max-content",
+                    alignSelf: "flex-end",
+                    paddingBottom: 1,
+                    paddingLeft: 3,
+                    fontWeight: "bold",
+                    fontFamily: "Ms Madi",
+                    // fontFamily: " 'Poppins', sans-serif",
+                    color: "#197982",
+                  }}
+                >
+                  Body
+                </Typography>
+                <Typography>by Jaya</Typography>
               </Stack>
             </Link>
           </Box>
 
           <Stack direction="row" gap={2}>
-           
-
             <Box alignSelf="center">
-              <AppBarButton/>
-           
+              <AppBarButton />
             </Box>
           </Stack>
-
-
-
-
-
-
 
           {/* <div>
               <StyledCenterStack
@@ -100,8 +82,10 @@ export function LgBar() {
 export function SmallBar() {
   return (
     <ShowSmall>
-      <AppBar position="fixed" sx={{backgroundColor: "#101010",
-    justifyContent: "space-between",}}>
+      <AppBar
+        position="fixed"
+        sx={{ backgroundColor: "#101010", justifyContent: "space-between" }}
+      >
         <Toolbar>
           <Box flexGrow={1}>
             <Stack direction="row" gap={1}>

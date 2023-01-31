@@ -5,7 +5,6 @@ import {
   ListItemText,
   Drawer,
   IconButton,
-  List,
   Button,
 } from "@mui/material";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
