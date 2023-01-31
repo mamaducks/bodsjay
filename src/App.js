@@ -23,14 +23,14 @@ import EmailIcon from "@mui/icons-material/Email";
 
 
 import leaf from "./loveLeaf.png";
-import CloseIcon from "@mui/icons-material/Close";
-import SearchIcon from "@mui/icons-material/Search";
+// import CloseIcon from "@mui/icons-material/Close";
+// import SearchIcon from "@mui/icons-material/Search";
 import {
   ShowSmall,
   NoShowSmall,
   
 } from "./MediaBox.jsx";
-import { React, useState } from "react";
+// import { React, useState } from "react";
 import { AppBarButton } from "./AppBarButton";
 
 // const styles = {
