@@ -21,15 +21,10 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import EmailIcon from "@mui/icons-material/Email";
 
-
 import leaf from "./loveLeaf.png";
 // import CloseIcon from "@mui/icons-material/Close";
 // import SearchIcon from "@mui/icons-material/Search";
-import {
-  ShowSmall,
-  NoShowSmall,
-  
-} from "./MediaBox.jsx";
+import { ShowSmall, NoShowSmall } from "./MediaBox.jsx";
 // import { React, useState } from "react";
 import { AppBarButton } from "./AppBarButton";
 
@@ -85,10 +80,10 @@ function App() {
       </ShowSmall>
 
       <NoShowSmall>
-      <AppBar position="fixed">
-        <Toolbar>
-          <Box flexGrow={1}>
-            {/* <Link href={`/`} sx={{ textDecoration: "none" }}> */}
+        <AppBar position="sticky" sx={{ backgroundColor: "#0d0f11" }}>
+          <Toolbar>
+            <Box flexGrow={1}>
+              {/* <Link href={`/`} sx={{ textDecoration: "none" }}> */}
               <Stack direction="row" gap={1}>
                 {/* <img src={leaf} alt="logo" height={40} width={40} /> */}
 
@@ -102,23 +97,24 @@ function App() {
                     fontWeight: "bold",
                     fontFamily: "Ms Madi",
                     // fontFamily: " 'Poppins', sans-serif",
-                    color: "#197982",
+                    // color: "#0d0f11",
                   }}
                 >
                   Body
                 </Typography>
-                <Typography>by Jaya</Typography>
+
+                <Typography sx={{ alignSelf: "center" }}>by Jaya</Typography>
               </Stack>
-            {/* </Link> */}
-          </Box>
-
-          <Stack direction="row" gap={2}>
-            <Box alignSelf="center">
-              <AppBarButton />
+              {/* </Link> */}
             </Box>
-          </Stack>
 
-          {/* <div>
+            <Stack direction="row" gap={2}>
+              <Box alignSelf="center">
+                <AppBarButton />
+              </Box>
+            </Stack>
+
+            {/* <div>
               <StyledCenterStack
                 direction="row"
                 justifyContent="flex-end"
@@ -141,12 +137,11 @@ function App() {
                 </Avatar>
               </StyledCenterStack>
             </div> */}
-        </Toolbar>
-      </AppBar>
-    </NoShowSmall>
+          </Toolbar>
+        </AppBar>
+      </NoShowSmall>
 
-
-      <Container>
+      <Container sx={{ marginTop: 20 }}>
         <Container>
           <div
             style={{
@@ -237,24 +232,24 @@ function App() {
             </Box>
           </Stack> */}
 
-          <CardContent>
+          {/* <CardContent>
             <Typography
               color="textPrimary"
               variant="h4"
               gutterBottom
-              sx={{ fontFamily: "Dosis", textAlign: "center" }}
+              sx={{ fontFamily: "Dosis", textAlign: "center", fontWeight: 800 }}
             >
               Body Sculpting
             </Typography>
             <Divider />
-            <Typography variant="h5">
+            <Typography variant="body1">
               Enjoy full-body confidence with this safe, non-invasive procedure
               that has zero down-time and is completely painless. Eliminate
               stubborn fat pockets Reduce and smooth cellulite Sculpt and
               reshape your body Tighten and tone loose, sagging skin Improve
               skin elasticity and firmness
             </Typography>
-          </CardContent>
+          </CardContent> */}
 
           <Stack direction="row" gap={3} alignItems="center">
             <div
@@ -281,11 +276,49 @@ function App() {
                 maxHeight: "8em",
               }}
             /> */}
-            Same day results no surgery no pain no downtime Body sculpting is a
-            unique, stand alone procedure that targets stubborn, hard to get rid
-            of fat pockets without any downtime, pain, or side effects. Discover
-            a superior solution to improve the appearance of cellulite, improve
-            elasticity and firmness of skin, and help target specific areas.
+            <CardContent>
+              <Typography
+                color="textPrimary"
+                variant="h4"
+                gutterBottom
+                sx={{
+                  fontFamily: "Dosis",
+                  textAlign: "center",
+                  fontWeight: 800,
+                }}
+              >
+                Body Sculpting
+              </Typography>
+              <Divider />
+              <Typography variant="body1">
+                Enjoy full-body confidence with this safe, non-invasive
+                procedure that has zero down-time and is completely painless.
+                <ul
+                  style={{
+                    listStyleType: "square",
+                    fontWeight: 300,
+                    // lineHeight: 2,
+                    fontSize: "1.1rem",
+                    // letterSpacing: 1,
+                  }}
+                >
+                  <li>Eliminate stubborn fat pockets</li>
+                  <li>Reduce and smooth cellulite</li>
+                  <li>Sculpt and reshape your body</li>
+                  <li>Tighten and tone loose, sagging skin</li>
+                  <li>Improve skin elasticity and firmness</li>
+                </ul>
+              </Typography>
+
+              <Typography>
+                Same day results no surgery no pain no downtime Body sculpting
+                is a unique, stand alone procedure that targets stubborn, hard
+                to get rid of fat pockets without any downtime, pain, or side
+                effects. Discover a superior solution to improve the appearance
+                of cellulite, improve elasticity and firmness of skin, and help
+                target specific areas.
+              </Typography>
+            </CardContent>
           </Stack>
         </Container>
         {/* <div style={{
@@ -405,7 +438,10 @@ function App() {
             <Typography gutterBottom variant="h4" sx={{ fontFamily: "Dosis" }}>
               Faq
             </Typography>
-            <Typography sx={{ fontFamily: "Podkova", fontWeight: "bold" }}>
+            <Divider />
+            <Typography
+              sx={{ fontFamily: "Podkova", fontWeight: "bold", mt: 2 }}
+            >
               What is the difference between cavitation and radio frequency?
             </Typography>
             <Typography gutterBottom sx={{ fontFamily: "Arvo" }}>
@@ -414,14 +450,18 @@ function App() {
               non-invasive heat treatment that helps tighten, contour, and
               refine deeper lines of the skin over the face and body.
             </Typography>
-            <Typography sx={{ fontFamily: "Podkova", fontWeight: "bold" }}>
+            <Typography
+              sx={{ fontFamily: "Podkova", fontWeight: "bold", mt: 2 }}
+            >
               Who is an ideal candidate for body sculpting?
             </Typography>
             <Typography gutterBottom sx={{ fontFamily: "Arvo" }}>
               An ideal candidate is in overall good health, doesn't smoke, and
               is already within 15 lbs. of their goal weight.
             </Typography>
-            <Typography sx={{ fontFamily: "Podkova", fontWeight: "bold" }}>
+            <Typography
+              sx={{ fontFamily: "Podkova", fontWeight: "bold", mt: 2 }}
+            >
               How many sessions will I need? How long will it take to see
               results?
             </Typography>
@@ -438,10 +478,55 @@ function App() {
 
         <Container>
           <CardContent>
-            <Stack direction="row" justifyContent="space-evenly">
+            <Box
+              alignSelf="center"
+              paddingTop="5px"
+              display="flex"
+              justifyContent="center"
+            >
               <div>
-                <div>Hours</div>
-                <Stack direction="row" gap={2}>
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  gap={1}
+                  justifyContent="center"
+                >
+                  <Typography
+                    variant="h4"
+                    paddingTop="8px"
+                    paddingBottom="1px"
+                    fontFamily="Ms Madi"
+                    // gutterBottom
+                  >
+                    Body
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    paddingTop="8px"
+                    paddingBottom="1px"
+                    fontFamily="Dosis"
+                  >
+                    by Jaya
+                  </Typography>
+                </Stack>
+
+                <Typography
+                  color="textPrimary"
+                  variant="h6"
+                  gutterBottom
+                  fontFamily="Dosis"
+                >
+                  Personalized body sculpting
+                </Typography>
+              </div>
+            </Box>
+
+            <Stack direction="row" justifyContent="space-evenly" mt={2}>
+              <div>
+                <Typography fontFamily="Dosis" variant="h5">
+                  Hours
+                </Typography>
+                <Stack direction="row" gap={2} sx={{ mt: 2 }}>
                   <Typography color="textPrimary" gutterBottom>
                     Monday:
                   </Typography>
@@ -490,30 +575,109 @@ function App() {
               </div>
 
               <div>
-                <div>Contact</div>
-
-                <Typography color="textPrimary" gutterBottom>
-                  Personalized body sculpting
-                </Typography>
-                <Typography color="textSecondary">+856-357-5954</Typography>
-
-                <Typography color="textPrimary" gutterBottom>
-                  bodybyjaya@gmail.com
+                <Typography fontFamily="Dosis" variant="h5">
+                  Contact
                 </Typography>
 
-                <Typography color="textSecondary">
-                  <a href="https://www.facebook.com/Home-Inspections-105580485123207/">
-                    <FacebookIcon color="black" />
-                  </a>
-                  @bodybyjaya
-                  <a
-                    href="https://www.instagram.com/buyerbewarehomeinspections"
-                    className="instagram social"
-                  >
-                    <InstagramIcon color="black" />
-                  </a>
-                  @bodybyjaya
-                </Typography>
+                <Box alignSelf="center">
+                  <Stack direction="row" gap={1} sx={{ mt: 2 }}>
+                    {/* <Box
+                    sx={{
+                      paddingInline: "8px",
+                      display: "flex",
+                      alignItems: "center",
+                      fontSize: "1.1em",
+                      // color: '#c54097',
+                      color: "#fefefe",
+                    }}
+                  > */}
+                    <PhoneAndroidIcon />
+                    {/* </Box> */}
+                    <Typography
+                      variant="body1"
+                      // sx={{
+                      //   display: "flex",
+                      //   // color: '#c54097',
+                      //   // color: "#fefefe",
+                      // }}
+                    >
+                      1-856-357-5954
+                    </Typography>
+                  </Stack>
+
+                  <Stack direction="row" sx={{ mt: 2 }} gap={1}>
+                    {/* <Box
+                    sx={{
+                      paddingInline: "8px",
+                      display: "flex",
+                      alignItems: "center",
+                      fontSize: "1.1em",
+                      // color: '#c54097',
+                      // color: "#fefefe",
+                    }}
+                  > */}
+                    <EmailIcon />
+                    {/* </Box> */}
+                    <Typography
+                      variant="body1"
+                      // sx={{
+                      //   display: "flex",
+                      //   // color: '#c54097',
+                      //   color: "#fefefe",
+                      // }}
+                    >
+                      bodybyjaya@gmail.com
+                    </Typography>
+                  </Stack>
+
+                  <Stack direction="row" sx={{ mt: 2 }} gap={1}>
+                    {/* <Box
+                    sx={{
+                      paddingInline: "8px",
+                      display: "flex",
+                      alignItems: "center",
+                      fontSize: "1.1em",
+                      // color: '#c54097',
+                      // color: "#fefefe",
+                    }}
+                  > */}
+
+                    <a href="https://www.facebook.com/Home-Inspections-105580485123207/">
+                      <FacebookIcon sx={{ color: "#0d0f11" }} />
+                    </a>
+
+                    {/* </Box> */}
+                    <Typography
+                      variant="body1"
+                      // sx={{
+                      //   display: "flex",
+                      //   // color: '#c54097',
+                      //   color: "#fefefe",
+                      // }}
+                    >
+                      @bodybyjaya
+                    </Typography>
+                  </Stack>
+
+                  <Stack direction="row" sx={{ mt: 2 }} gap={1}>
+                    <a
+                      href="https://www.instagram.com/buyerbewarehomeinspections"
+                      className="instagram social"
+                    >
+                      <InstagramIcon sx={{ color: "#0d0f11" }} />
+                    </a>
+                    <Typography
+                      variant="body1"
+                      // sx={{
+                      //   display: "flex",
+                      //   // color: '#c54097',
+                      //   color: "#fefefe",
+                      // }}
+                    >
+                      @bodybyjaya
+                    </Typography>
+                  </Stack>
+                </Box>
               </div>
             </Stack>
           </CardContent>
@@ -550,7 +714,7 @@ function App() {
             </a>
           </Box>
         </CardContent> */}
-        <Box alignSelf="center" paddingTop="5px">
+        {/* <Box alignSelf="center" paddingTop="5px">
           <CardContent style={{ padding: "0px" }}>
             <Typography
               color="textPrimary"
@@ -569,104 +733,144 @@ function App() {
 
             <Divider />
           </CardContent>
-        </Box>
+        </Box> */}
 
         <>
-          <AppBar position="sticky" elevation={0}>
-            <Box
+          <AppBar
+            position="sticky"
+            elevation={0}
+            sx={{ backgroundColor: "#0d0f11", pb: 4 }}
+          >
+            <Box alignSelf="center" paddingTop="5px">
+              <CardContent
+              // style={{ padding: "0px" }}
+              >
+                <Typography
+                  color="#fefefe"
+                  variant="h6"
+                  gutterBottom
+                  style={{ alignItems: "center", flexWrap: "nowrap" }}
+                >
+                  Contact us today to schedule! We'd
+                  <FavoriteIcon
+                    fontSize="1.1rem"
+                    // color="#a71976"
+                    style={{ paddingInline: "8px" }}
+                  />
+                  to hear from you!
+                </Typography>
+
+                {/* <Divider /> */}
+              </CardContent>
+            </Box>
+            {/* <Box
               display="flex"
               // color="#a71976"
-              color="#123754"
+              color="#fefefe"
               alignItems="center"
               flexWrap="wrap"
               // alignContent="center"
-            >
-              <Box textAlign="center" flex="auto" paddingTop="10px">
-                <Typography
-                  variant="subtitle1"
-                  paddingTop="8px"
-                  paddingBottom="1px"
-                  gutterBottom
+            > */}
+            {/* <Box textAlign="center" flex="auto" paddingTop="10px"> */}
+            <Stack direction="row" justifyContent="space-evenly">
+              <Box>
+                <Stack direction="row" alignItems="center" gap={1}>
+                  <Typography
+                    variant="h4"
+                    paddingTop="8px"
+                    paddingBottom="1px"
+                    fontFamily="Ms Madi"
+                    gutterBottom
+                  >
+                    Body
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    paddingTop="8px"
+                    paddingBottom="1px"
+                    fontFamily="Dosis"
+                  >
+                    by Jaya
+                  </Typography>
+                </Stack>
+                <Stack
+                  direction="row"
+                  alignSelf="center"
+                  gap={3}
+                  justifyContent="center"
                 >
-                  Body by Jaya
-                </Typography>
+                  <FacebookIcon />
+                  <InstagramIcon />
+                </Stack>
               </Box>
 
-              <Box
-                // margin="5px"
-                display="flex"
-                flex="auto"
-                alignItems="center"
-                style={{ justifyContent: "center" }}
-              ></Box>
+              <Box alignSelf="center">
+                <Stack direction="row" gap={1} sx={{ mt: 2 }}>
+                  <Box
+                    sx={{
+                      paddingInline: "8px",
+                      display: "flex",
+                      alignItems: "center",
+                      fontSize: "1.1em",
+                      // color: '#c54097',
+                      color: "#fefefe",
+                    }}
+                  >
+                    <PhoneAndroidIcon />
+                  </Box>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      display: "flex",
+                      // color: '#c54097',
+                      // color: "#fefefe",
+                    }}
+                  >
+                    1-856-357-5954
+                  </Typography>
+                </Stack>
 
+                <Stack direction="row" sx={{ mt: 2 }} gap={1}>
+                  <Box
+                    sx={{
+                      paddingInline: "8px",
+                      display: "flex",
+                      alignItems: "center",
+                      fontSize: "1.1em",
+                      // color: '#c54097',
+                      // color: "#fefefe",
+                    }}
+                  >
+                    <EmailIcon />
+                  </Box>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      display: "flex",
+                      // color: '#c54097',
+                      color: "#fefefe",
+                    }}
+                  >
+                    bodybyjaya@gmail.com
+                  </Typography>
+                </Stack>
+              </Box>
+            </Stack>
+
+            {/* </Box> */}
+
+            {/* 
               <div
                 style={{
                   display: "flex",
                   flex: "auto",
                   flexDirection: "column",
-                  alignItems: "center",
+                  // alignItems: "center",
                 }}
-              >
-                <PhoneAndroidIcon />
-                text="1-609-670-0451"
-                <Typography
-                  variant="body1"
-                  sx={{
-                    display: "flex",
-                    // color: '#c54097',
-                    color: "#123754",
-                  }}
-                >
-                  <Box
-                    sx={{
-                      paddingInline: "8px",
-                      display: "flex",
-                      alignItems: "center",
-                      fontSize: "1.1em",
-                      // color: '#c54097',
-                      color: "#4687b6",
-                    }}
-                  >
-                    <PhoneAndroidIcon />
-                  </Box>
-                  number
-                </Typography>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    display: "flex",
-                    // color: '#c54097',
-                    color: "#123754",
-                  }}
-                >
-                  <Box
-                    sx={{
-                      paddingInline: "8px",
-                      display: "flex",
-                      alignItems: "center",
-                      fontSize: "1.1em",
-                      // color: '#c54097',
-                      color: "#4687b6",
-                    }}
-                  >
-                    <Box
-                      sx={{
-                        paddingInline: "8px",
-                        display: "flex",
-                        alignItems: "center",
-                        fontSize: "1.1em",
-                        // color: '#c54097',
-                        color: "#4687b6",
-                      }}
-                    >
-                      <EmailIcon />
-                    </Box>
-                  </Box>
-                  Send us an email
-                </Typography>
-              </div>
-            </Box>
+              > */}
+
+            {/* </div> */}
+            {/* </Box> */}
           </AppBar>
         </>
       </Container>

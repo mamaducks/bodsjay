@@ -17,8 +17,8 @@ export function AppBarButton() {
 
   return (
     <>
-      <IconButton onClick={() => setGoToSection(true)}>
-        <MenuIcon />
+      <IconButton onClick={() => setGoToSection(true)} >
+        <MenuIcon sx={{color:"#fefefe"}}/>
       </IconButton>
 
       <Drawer
