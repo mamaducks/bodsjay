@@ -27,6 +27,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import EmailIcon from "@mui/icons-material/Email";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 // import CloseIcon from "@mui/icons-material/Close";
 // import SearchIcon from "@mui/icons-material/Search";
@@ -746,13 +747,15 @@ function App() {
               </div>
             ))}
             <div>
-              <Button
-                href="https://bodybyjaya.as.me/schedule.php"
-                variant="contained"
-                sx={{ backgroundColor: "#101010" }}
-              >
-                Schedule today
-              </Button>
+              <Box display="flex" justifyContent="center">
+                <Button
+                  href="https://bodybyjaya.as.me/schedule.php"
+                  variant="contained"
+                  sx={{ backgroundColor: "#101010" }}
+                >
+                  Schedule today
+                </Button>
+              </Box>
               {/* <InstagramIcon sx={{ color: "#0d0f11" }} /> */}
             </div>
             {/* 
@@ -906,6 +909,7 @@ function App() {
                 </Typography>
               </div>
             </Box>
+          
 
             <Stack direction="row" justifyContent="space-evenly" mt={2}>
               <div>
@@ -1062,7 +1066,24 @@ function App() {
                       @bodybyjaya
                     </Typography>
                   </Stack>
-                  <Box sx={{ mt: 2 }}>
+
+                  <Stack direction="row" sx={{ mt: 2 }} gap={1}>
+                    <LocationOnIcon sx={{ color: "#0d0f11" }} />
+                    <Typography
+                      color="textPrimary"
+                      variant="body1"
+                      gutterBottom
+                      fontFamily="Dosis"
+                      fontWeight="bold"
+                    >
+                      5434 King Avenue Pennsauken NJ 09109
+                    </Typography>
+                  </Stack>
+
+                
+                </Box>
+              </div>
+            </Stack>  <Box display="flex" justifyContent="center" sx={{ mt: 2 }}>
                     <Button
                       href="https://bodybyjaya.as.me/schedule.php"
                       variant="contained"
@@ -1073,9 +1094,6 @@ function App() {
                     </Button>
                     {/* <InstagramIcon sx={{ color: "#0d0f11" }} /> */}
                   </Box>
-                </Box>
-              </div>
-            </Stack>
           </CardContent>
         </Container>
 
