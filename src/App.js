@@ -97,9 +97,24 @@ function App() {
           <Toolbar>
             <Box flexGrow={1}>
               <Stack direction="row" gap={1}>
-                <img src={logoJaya} alt="logo" height={28} width={28} />
+                {/* <img src={logoJaya} alt="logo" height={28} width={28} /> */}
                 {/* <Link href={`/`} sx={{ textDecoration: "none" }}> */}
-                <Typography variant="h4">Body by Jaya</Typography>
+                {/* <Typography variant="h4">Body by Jaya</Typography> */}
+                <Typography
+                  variant="h4"
+                  sx={{
+                    minWidth: "max-content",
+                    alignSelf: "flex-end",
+                    paddingBottom: 1,
+                    paddingLeft: 3,
+                    fontWeight: 600,
+                    fontFamily: "Ms Madi",
+                    // fontFamily: " 'Poppins', sans-serif",
+                    // color: "#0d0f11",
+                  }}
+                >
+                  body by jaya
+                </Typography>
                 {/* </Link> */}
               </Stack>
             </Box>
@@ -129,16 +144,16 @@ function App() {
                     alignSelf: "flex-end",
                     paddingBottom: 1,
                     paddingLeft: 3,
-                    fontWeight: "bold",
+                    fontWeight: 600,
                     fontFamily: "Ms Madi",
                     // fontFamily: " 'Poppins', sans-serif",
                     // color: "#0d0f11",
                   }}
                 >
-                  Body
+                  body by jaya
                 </Typography>
 
-                <Typography sx={{ alignSelf: "center" }}>by Jaya</Typography>
+                {/* <Typography sx={{ alignSelf: "center" }}>by Jaya</Typography> */}
               </Stack>
               {/* </Link> */}
             </Box>
