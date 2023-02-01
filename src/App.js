@@ -1,6 +1,6 @@
-import shapesBod from "./shapesbod.png";
 import circJaya from "./circjaya.png";
 import grimgJaya from "./grimgjaya.png";
+import logoJaya from "./jayalogo.png";
 
 import a from "./a.png";
 import b from "./b.png";
@@ -11,6 +11,7 @@ import "./App.css";
 import { Box } from "@mui/system";
 import {
   AppBar,
+  Button,
   Card,
   CardContent,
   Container,
@@ -27,7 +28,6 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import EmailIcon from "@mui/icons-material/Email";
 
-import leaf from "./loveLeaf.png";
 // import CloseIcon from "@mui/icons-material/Close";
 // import SearchIcon from "@mui/icons-material/Search";
 import { ShowSmall, NoShowSmall } from "./MediaBox.jsx";
@@ -57,36 +57,35 @@ import { AppBarButton } from "./AppBarButton";
 //   },
 // };
 
-
 const servicesCard = [
   {
     image: a,
     textFront: "  Cavitation",
-    textBack: "  Lipo Cavitation is a non-surgical, non-invasive technology that utilizes sound waves to break down and eliminate fat cells. This procedure is a safer alternative to surgical options, like liposuction. The treatment uses ultrasonic radio waves to break apart fat cells, which are then absorbed into your body by your lymphatic system. ",
+    textBack:
+      "  Lipo Cavitation is a non-surgical, non-invasive technology that utilizes sound waves to break down and eliminate fat cells. This procedure is a safer alternative to surgical options, like liposuction. The treatment uses ultrasonic radio waves to break apart fat cells, which are then absorbed into your body by your lymphatic system. ",
   },
   {
     image: b,
     textFront: "Laser Lipolysis",
-    textBack: "  Laser lipolysis is a minimally invasive procedure that uses heat from fiber-optic lasers at various wavelengths to melt body fat. The added benefit of laser lipolysis is that it spurs the production of the protein collagen, making skin more taut. ",
+    textBack:
+      "  Laser lipolysis is a minimally invasive procedure that uses heat from fiber-optic lasers at various wavelengths to melt body fat. The added benefit of laser lipolysis is that it spurs the production of the protein collagen, making skin more taut. ",
   },
   {
     image: c,
     textFront: "Radio-Frequency",
-    textBack: " Radio Frequency facial skin tightening is a minimally invasive procedure that tightens the skin and improves tone without any pain or downtime. Radio Frequency (RF) facial treatments work by using heat to trigger collagen and elastin production in the skin's deeper levels. ",
+    textBack:
+      " Radio Frequency facial skin tightening is a minimally invasive procedure that tightens the skin and improves tone without any pain or downtime. Radio Frequency (RF) facial treatments work by using heat to trigger collagen and elastin production in the skin's deeper levels. ",
   },
   {
     image: d,
     textFront: "Wood Therapy",
-    textBack: "Wood therapy is a vigorous massage technique that utilizes wooden, handheld tools, such as rolling pins and vacuum-suction cups. Purportedly, wood therapy is centuries old and originated in Asia. Wood therapy increases lymphatic circulation, reducing the appearance of wrinkles and cellulite. ",
+    textBack:
+      "Wood therapy is a vigorous massage technique that utilizes wooden, handheld tools, such as rolling pins and vacuum-suction cups. Purportedly, wood therapy is centuries old and originated in Asia. Wood therapy increases lymphatic circulation, reducing the appearance of wrinkles and cellulite. ",
   },
 ];
 
-
-
 function App() {
   const [selected, setSelected] = useState();
-
-
 
   return (
     <>
@@ -98,7 +97,7 @@ function App() {
           <Toolbar>
             <Box flexGrow={1}>
               <Stack direction="row" gap={1}>
-                <img src={leaf} alt="logo" height={28} width={28} />
+                <img src={logoJaya} alt="logo" height={28} width={28} />
                 {/* <Link href={`/`} sx={{ textDecoration: "none" }}> */}
                 <Typography variant="h4">Body by Jaya</Typography>
                 {/* </Link> */}
@@ -178,8 +177,21 @@ function App() {
       </NoShowSmall>
 
       <Container sx={{ marginTop: 20 }}>
+        <img
+          alt=""
+          src={logoJaya}
+          width="100%"
+          height="auto"
+          // style={{
+          //   alignSelf: "center",
+          //   minWidth: 350,
+          //   // paddingBlock: "10px",
+          //   // flexGrow: 0,
+          //   // marginInline: 20,
+          // }}
+        />
         <Container>
-          <div
+          {/* <div
             style={{
               backgroundSize: "cover",
               backgroundImage: `url(${shapesBod})`,
@@ -192,7 +204,7 @@ function App() {
           >
             {/* <Grid> */}
 
-            <Box
+          {/* <Box
               style={{
                 position: "absolute",
                 top: "45%",
@@ -228,8 +240,8 @@ function App() {
                   </Typography>
                 </Box>
               </Box>
-            </Box>
-          </div>
+            </Box> 
+          </div> */}
         </Container>
 
         {/* </Grid> */}
@@ -248,72 +260,63 @@ function App() {
               // }}
             /> */}
 
-<Box
-      display="flex"
-      // flexDirection={!!reverse ? 'row-reverse' : 'row'}
-      justifyContent="space-evenly"
-      alignContent="space-between"
-      margin="10px 0"
-      // width="-webkit-fill-available"
-      flex="1 auto"
-    >
+        <Box
+          display="flex"
+          // flexDirection={!!reverse ? 'row-reverse' : 'row'}
+          justifyContent="space-evenly"
+          alignContent="space-between"
+          margin="10px 0"
+          // width="-webkit-fill-available"
+          flex="1 auto"
+        >
+          <img
+            alt=""
+            src={circJaya}
+            width="45%"
+            height="auto"
+            style={{
+              alignSelf: "center",
+              minWidth: 350,
+              paddingBlock: "10px",
+              flexGrow: 0,
+              marginInline: 20,
+            }}
+          />
 
-<img
-          alt=""
-          src={circJaya}
-          width="45%"
-          height="auto"
-          style={{
-            alignSelf: 'center',
-            minWidth: 350,
-            paddingBlock: '10px',
-            flexGrow: 0,
-            marginInline: 20
-          }}
-        />
+          <Box></Box>
+          <CardContent sx={{ alignItems: "center" }}>
+            <Typography color="textPrimary" variant="h5" gutterBottom>
+              Body Sculpting
+            </Typography>
+            <Divider />
+            <Typography>
+              Body sculpting is a unique, stand alone procedure that targets
+              stubborn, hard to get rid of fat pockets without any downtime,
+              pain, or side effects. Discover a superior solution to improve the
+              appearance of cellulite, improve elasticity and firmness of skin,
+              and help target specific areas.
+            </Typography>
 
-<Box>
+            <Typography>
+              <ul
+                style={{
+                  listStyleType: "square",
+                  fontWeight: 300,
+                  // lineHeight: 2,
+                  fontSize: "1.1rem",
+                  // letterSpacing: 1,
+                }}
+              >
+                <li>Same day results</li>
+                <li>no surgery</li>
+                <li>no pain</li>
+                <li>no downtime </li>
+              </ul>
+            </Typography>
+          </CardContent>
+        </Box>
 
-
-</Box>
- <CardContent sx={{alignItems:"center"}} >
-      <Typography color="textPrimary" variant="h5" gutterBottom>
-      Body Sculpting
-      </Typography>
-      <Divider />
-      <Typography>
-          Body sculpting is a unique, stand alone procedure that targets
-                  stubborn, hard to get rid of fat pockets without any downtime,
-                  pain, or side effects. Discover a superior solution to improve
-                  the appearance of cellulite, improve elasticity and firmness
-                  of skin, and help target specific areas.
-      </Typography>
-     
-      <Typography>
-                <ul
-                  style={{
-                    listStyleType: "square",
-                    fontWeight: 300,
-                    // lineHeight: 2,
-                    fontSize: "1.1rem",
-                    // letterSpacing: 1,
-                  }}
-                >
-                
-                  <li>Same day results</li>
-                  <li>no surgery</li>
-                  <li>no pain</li>
-                  <li>no downtime </li>
-                </ul>
-              </Typography>
-    </CardContent>
-
-      </Box>
-
-
-
-
-{/* 
+        {/* 
 <Card sx={{ display:"flex", flexDirection:"column" }}>
               <CardMedia image={circJaya} 
               component="img"
@@ -361,12 +364,6 @@ function App() {
               
             </Card> */}
 
-
-
-
-
-
-
         <Container>
           {/* <Stack>
             <Typography
@@ -408,7 +405,6 @@ function App() {
           </CardContent> */}
 
           <Stack direction="row" gap={3} alignItems="center">
-
             {/* <Card>
               <CardMedia image={circJaya} sx={{ height: 140 }}/>
 
@@ -452,7 +448,7 @@ function App() {
             </CardContent>
               
             </Card> */}
-            
+
             {/* <Box
               style={{
                 backgroundSize: "cover",
@@ -464,7 +460,7 @@ function App() {
                 marginBottom: "10px",
               }}
             /> */}
-            
+
             {/* <img
               src={circJaya}
               alt="imgA"
@@ -517,46 +513,43 @@ function App() {
             </CardContent> */}
           </Stack>
 
-
           <Box
-      display="flex"
-      // flexDirection={!!reverse ? 'row-reverse' : 'row'}
-      justifyContent="space-evenly"
-      alignContent="space-between"
-      margin="10px 0"
-      // width="-webkit-fill-available"
-      flex="1 auto"
-    >
+            display="flex"
+            // flexDirection={!!reverse ? 'row-reverse' : 'row'}
+            justifyContent="space-evenly"
+            alignContent="space-between"
+            margin="10px 0"
+            // width="-webkit-fill-available"
+            flex="1 auto"
+          >
+            <img
+              alt=""
+              src={circJaya}
+              width="45%"
+              height="auto"
+              style={{
+                alignSelf: "flex-end",
+                minWidth: 350,
+                paddingBlock: "10px",
+                flexGrow: 0,
+                marginInline: 20,
+              }}
+            />
 
-<img
-          alt=""
-          src={circJaya}
-          width="45%"
-          height="auto"
-          style={{
-            alignSelf: 'flex-end',
-            minWidth: 350,
-            paddingBlock: '10px',
-            flexGrow: 0,
-            marginInline: 20
-          }}
-        />
+            <CardContent sx={{ alignItems: "center" }}>
+              <Typography color="textPrimary" variant="h5" gutterBottom>
+                Body Sculpting
+              </Typography>
+              <Divider />
+              <Typography>
+                Body sculpting is a unique, stand alone procedure that targets
+                stubborn, hard to get rid of fat pockets without any downtime,
+                pain, or side effects. Discover a superior solution to improve
+                the appearance of cellulite, improve elasticity and firmness of
+                skin, and help target specific areas.
+              </Typography>
 
-
- <CardContent sx={{alignItems:"center"}} >
-      <Typography color="textPrimary" variant="h5" gutterBottom>
-      Body Sculpting
-      </Typography>
-      <Divider />
-      <Typography>
-          Body sculpting is a unique, stand alone procedure that targets
-                  stubborn, hard to get rid of fat pockets without any downtime,
-                  pain, or side effects. Discover a superior solution to improve
-                  the appearance of cellulite, improve elasticity and firmness
-                  of skin, and help target specific areas.
-      </Typography>
-     
-      <Typography>
+              <Typography>
                 <ul
                   style={{
                     listStyleType: "square",
@@ -566,34 +559,28 @@ function App() {
                     // letterSpacing: 1,
                   }}
                 >
-                
                   <li>Same day results</li>
                   <li>no surgery</li>
                   <li>no pain</li>
                   <li>no downtime </li>
                 </ul>
               </Typography>
-    </CardContent>
+            </CardContent>
 
-    <img
-          alt=""
-          src={grimgJaya}
-          width="45%"
-          height="auto"
-          style={{
-            alignSelf: 'center',
-            minWidth: 350,
-            paddingBlock: '10px',
-            flexGrow: 0,
-            marginInline: 20
-          }}
-        />
-      </Box>
-
-
-
-
-
+            <img
+              alt=""
+              src={grimgJaya}
+              width="45%"
+              height="auto"
+              style={{
+                alignSelf: "center",
+                minWidth: 350,
+                paddingBlock: "10px",
+                flexGrow: 0,
+                marginInline: 20,
+              }}
+            />
+          </Box>
 
           <Stack direction="row" gap={3} alignItems="center">
             <CardContent>
@@ -710,50 +697,50 @@ function App() {
             </Typography>
           </CardContent> */}
 
+            <Dialog open={!!selected} onClose={() => setSelected(undefined)}>
+              <Box
+                justifyContent="space-between"
+                padding="25px"
+                width="300px"
+                letterSpacing={0.3}
+              >
+                <Box>{selected?.textBack}</Box>
+              </Box>
+            </Dialog>
+            {servicesCard.map(({ image, textBack, textFront }, index) => (
+              <div key={index} title={textBack}>
+                <Box
+                  sx={{
+                    padding: "10px",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}
+                >
+                  <Card
+                    onClick={() => setSelected({ image, textBack, textFront })}
+                    style={{ margin: "8px", cursor: "pointer" }}
+                  >
+                    <Box justifyContent="center" width="230px" height="180px">
+                      <img alt="" src={image} width="50px" height="50px" />
 
-<Dialog open={!!selected} onClose={() => setSelected(undefined)}>
-<Box
-          justifyContent="space-between"
-          padding="25px"
-          width="300px"
-          letterSpacing={0.3}
-        >
-
-          <Box>{selected?.textBack}</Box>
-        </Box>
-
-  </Dialog>
-  {servicesCard.map(({image, textBack, textFront}, index) => (
-  <div key={index} title={textBack}>
-    <Box sx={{padding:"10px",
-        display:"flex",
-        flexDirection:"column",
-        alignItems:"center"
-        }}>
-      
-      
-      
-      
-
-       <Card
-    onClick={() => setSelected({image, textBack, textFront})}
-    style={{margin: '8px', cursor: 'pointer'}}
-  >
-    <Box justifyContent="center" width="230px" height="180px">
-      <img alt="" src={image} width="50px" height="50px" />
-
-      <Box>{textFront}</Box>
-    </Box>
-  </Card>
-  </Box> 
- 
-</div>
-  ))}
-
-
-
-
-{/* 
+                      <Box>{textFront}</Box>
+                    </Box>
+                  </Card>
+                </Box>
+              </div>
+            ))}
+            <div>
+              <Button
+                href="https://bodybyjaya.as.me/schedule.php"
+                variant="contained"
+                sx={{ backgroundColor: "#101010" }}
+              >
+                Schedule today
+              </Button>
+              {/* <InstagramIcon sx={{ color: "#0d0f11" }} /> */}
+            </div>
+            {/* 
             <Stack direction="row">
               <Card sx={{ m: 3, p: 3 , height:"100%", width:"50rem"}}>
                 <Typography
@@ -900,7 +887,7 @@ function App() {
                   gutterBottom
                   fontFamily="Dosis"
                 >
-                  Personalized body sculpting
+                  Body Contouring Services
                 </Typography>
               </div>
             </Box>
@@ -1025,8 +1012,7 @@ function App() {
                       // color: "#fefefe",
                     }}
                   > */}
-
-                    <a href="https://www.facebook.com/Home-Inspections-105580485123207/">
+                    <a href="https://www.facebook.com/profile.php?id=100089984763471&mibextid=LQQJ4d">
                       <FacebookIcon sx={{ color: "#0d0f11" }} />
                     </a>
 
@@ -1045,7 +1031,7 @@ function App() {
 
                   <Stack direction="row" sx={{ mt: 2 }} gap={1}>
                     <a
-                      href="https://www.instagram.com/buyerbewarehomeinspections"
+                      href="https://www.instagram.com/bodybyjaya/?igshid=YmMyMTA2M2Y%3D"
                       className="instagram social"
                     >
                       <InstagramIcon sx={{ color: "#0d0f11" }} />
@@ -1061,6 +1047,17 @@ function App() {
                       @bodybyjaya
                     </Typography>
                   </Stack>
+                  <Box sx={{ mt: 2 }}>
+                    <Button
+                      href="https://bodybyjaya.as.me/schedule.php"
+                      variant="contained"
+                      size="small"
+                      sx={{ backgroundColor: "#101010" }}
+                    >
+                      Schedule Online
+                    </Button>
+                    {/* <InstagramIcon sx={{ color: "#0d0f11" }} /> */}
+                  </Box>
                 </Box>
               </div>
             </Stack>
@@ -1139,7 +1136,7 @@ function App() {
                   <FavoriteIcon
                     fontSize="1.1rem"
                     // color="#a71976"
-                    style={{ paddingInline: "8px" }}
+                    style={{ paddingInline: "8px", textAlign: "center" }}
                   />
                   to hear from you!
                 </Typography>
@@ -1183,8 +1180,15 @@ function App() {
                   gap={3}
                   justifyContent="center"
                 >
-                  <FacebookIcon />
-                  <InstagramIcon />
+                  <a href="https://www.facebook.com/profile.php?id=100089984763471&mibextid=LQQJ4d">
+                    <FacebookIcon sx={{ color: "#fefefe" }} />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/bodybyjaya/?igshid=YmMyMTA2M2Y%3D"
+                    className="instagram social"
+                  >
+                    <InstagramIcon sx={{ color: "#fefefe" }} />
+                  </a>
                 </Stack>
               </Box>
 
@@ -1238,6 +1242,16 @@ function App() {
                     bodybyjaya@gmail.com
                   </Typography>
                 </Stack>
+                <Box display="flex" justifyContent="center">
+                  <Button
+                    href="https://bodybyjaya.as.me/schedule.php"
+                    variant="contained"
+                    size="small"
+                    sx={{ backgroundColor: "#101010" }}
+                  >
+                    Schedule Online
+                  </Button>
+                </Box>
               </Box>
             </Stack>
 
