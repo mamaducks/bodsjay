@@ -2,13 +2,20 @@ import shapesBod from "./shapesbod.png";
 import circJaya from "./circjaya.png";
 import grimgJaya from "./grimgjaya.png";
 
+import a from "./a.png";
+import b from "./b.png";
+import c from "./c.png";
+import d from "./d.png";
+
 import "./App.css";
 import { Box } from "@mui/system";
 import {
   AppBar,
   Card,
   CardContent,
+  CardMedia,
   Container,
+  Dialog,
   Divider,
   Stack,
   Toolbar,
@@ -25,7 +32,7 @@ import leaf from "./loveLeaf.png";
 // import CloseIcon from "@mui/icons-material/Close";
 // import SearchIcon from "@mui/icons-material/Search";
 import { ShowSmall, NoShowSmall } from "./MediaBox.jsx";
-// import { React, useState } from "react";
+import { React, useState } from "react";
 import { AppBarButton } from "./AppBarButton";
 
 // const styles = {
@@ -51,7 +58,37 @@ import { AppBarButton } from "./AppBarButton";
 //   },
 // };
 
+
+const servicesCard = [
+  {
+    image: a,
+    textFront: "  Cavitation",
+    textBack: "  Lipo Cavitation is a non-surgical, non-invasive technology that utilizes sound waves to break down and eliminate fat cells. This procedure is a safer alternative to surgical options, like liposuction. The treatment uses ultrasonic radio waves to break apart fat cells, which are then absorbed into your body by your lymphatic system. ",
+  },
+  {
+    image: b,
+    textFront: "Laser Lipolysis",
+    textBack: "  Laser lipolysis is a minimally invasive procedure that uses heat from fiber-optic lasers at various wavelengths to melt body fat. The added benefit of laser lipolysis is that it spurs the production of the protein collagen, making skin more taut. ",
+  },
+  {
+    image: c,
+    textFront: "Radio-Frequency",
+    textBack: " Radio Frequency facial skin tightening is a minimally invasive procedure that tightens the skin and improves tone without any pain or downtime. Radio Frequency (RF) facial treatments work by using heat to trigger collagen and elastin production in the skin's deeper levels. ",
+  },
+  {
+    image: d,
+    textFront: "Wood Therapy",
+    textBack: "Wood therapy is a vigorous massage technique that utilizes wooden, handheld tools, such as rolling pins and vacuum-suction cups. Purportedly, wood therapy is centuries old and originated in Asia. Wood therapy increases lymphatic circulation, reducing the appearance of wrinkles and cellulite. ",
+  },
+];
+
+
+
 function App() {
+  const [selected, setSelected] = useState();
+
+
+
   return (
     <>
       <ShowSmall>
@@ -211,6 +248,126 @@ function App() {
               //   maxHeight: "8em",
               // }}
             /> */}
+
+<Box
+      display="flex"
+      // flexDirection={!!reverse ? 'row-reverse' : 'row'}
+      justifyContent="space-evenly"
+      alignContent="space-between"
+      margin="10px 0"
+      // width="-webkit-fill-available"
+      flex="1 auto"
+    >
+
+<img
+          alt=""
+          src={circJaya}
+          width="45%"
+          height="auto"
+          style={{
+            alignSelf: 'center',
+            minWidth: 350,
+            paddingBlock: '10px',
+            flexGrow: 0,
+            marginInline: 20
+          }}
+        />
+
+<Box>
+
+
+</Box>
+ <CardContent sx={{alignItems:"center"}} >
+      <Typography color="textPrimary" variant="h5" gutterBottom>
+      Body Sculpting
+      </Typography>
+      <Divider />
+      <Typography>
+          Body sculpting is a unique, stand alone procedure that targets
+                  stubborn, hard to get rid of fat pockets without any downtime,
+                  pain, or side effects. Discover a superior solution to improve
+                  the appearance of cellulite, improve elasticity and firmness
+                  of skin, and help target specific areas.
+      </Typography>
+     
+      <Typography>
+                <ul
+                  style={{
+                    listStyleType: "square",
+                    fontWeight: 300,
+                    // lineHeight: 2,
+                    fontSize: "1.1rem",
+                    // letterSpacing: 1,
+                  }}
+                >
+                
+                  <li>Same day results</li>
+                  <li>no surgery</li>
+                  <li>no pain</li>
+                  <li>no downtime </li>
+                </ul>
+              </Typography>
+    </CardContent>
+
+      </Box>
+
+
+
+
+{/* 
+<Card sx={{ display:"flex", flexDirection:"column" }}>
+              <CardMedia image={circJaya} 
+              component="img"
+              sx={{ width: 151 }}
+              />
+
+
+              <CardContent sx={{ flex: '1 0 auto' }}>
+              <Typography
+                color="textPrimary"
+                variant="h4"
+                gutterBottom
+                sx={{
+                  fontFamily: "Dosis",
+                  textAlign: "center",
+                  fontWeight: 800,
+                }}
+              >
+                Body Sculpting
+              </Typography>
+              <Divider />
+
+              <Typography>
+                <ul
+                  style={{
+                    listStyleType: "square",
+                    fontWeight: 300,
+                    // lineHeight: 2,
+                    fontSize: "1.1rem",
+                    // letterSpacing: 1,
+                  }}
+                >
+                  Body sculpting is a unique, stand alone procedure that targets
+                  stubborn, hard to get rid of fat pockets without any downtime,
+                  pain, or side effects. Discover a superior solution to improve
+                  the appearance of cellulite, improve elasticity and firmness
+                  of skin, and help target specific areas.
+                  <li>Same day results</li>
+                  <li>no surgery</li>
+                  <li>no pain</li>
+                  <li>no downtime </li>
+                </ul>
+              </Typography>
+            </CardContent>
+              
+            </Card> */}
+
+
+
+
+
+
+
         <Container>
           {/* <Stack>
             <Typography
@@ -252,31 +409,12 @@ function App() {
           </CardContent> */}
 
           <Stack direction="row" gap={3} alignItems="center">
-            <div
-              style={{
-                backgroundSize: "cover",
-                backgroundImage: `url(${circJaya})`,
 
-                backgroundPosition: "center",
-                width: "100%",
-                height: "100vh",
-                marginBottom: "10px",
-              }}
-            ></div>
-            {/* <img
-              src={circJaya}
-              alt="imgA"
-             
+            {/* <Card>
+              <CardMedia image={circJaya} sx={{ height: 140 }}/>
 
-              style={{
-                margin: "auto",
-                display: "block",
-                width: "320px", 
-                height:"340px",
-                maxHeight: "8em",
-              }}
-            /> */}
-            <CardContent>
+
+              <CardContent>
               <Typography
                 color="textPrimary"
                 variant="h4"
@@ -290,9 +428,8 @@ function App() {
                 Body Sculpting
               </Typography>
               <Divider />
-              <Typography variant="body1">
-                Enjoy full-body confidence with this safe, non-invasive
-                procedure that has zero down-time and is completely painless.
+
+              <Typography>
                 <ul
                   style={{
                     listStyleType: "square",
@@ -302,6 +439,190 @@ function App() {
                     // letterSpacing: 1,
                   }}
                 >
+                  Body sculpting is a unique, stand alone procedure that targets
+                  stubborn, hard to get rid of fat pockets without any downtime,
+                  pain, or side effects. Discover a superior solution to improve
+                  the appearance of cellulite, improve elasticity and firmness
+                  of skin, and help target specific areas.
+                  <li>Same day results</li>
+                  <li>no surgery</li>
+                  <li>no pain</li>
+                  <li>no downtime </li>
+                </ul>
+              </Typography>
+            </CardContent>
+              
+            </Card> */}
+            
+            {/* <Box
+              style={{
+                backgroundSize: "cover",
+                backgroundImage: `url(${circJaya})`,
+
+                backgroundPosition: "center",
+                width: "100em",
+                height: "100em",
+                marginBottom: "10px",
+              }}
+            /> */}
+            
+            {/* <img
+              src={circJaya}
+              alt="imgA"
+             
+
+              style={{
+                margin: "auto",
+                display: "block",
+                width: "320px", 
+                height:"340px",
+                maxHeight: "8em",
+              }}
+            /> */}
+            {/* <CardContent>
+              <Typography
+                color="textPrimary"
+                variant="h4"
+                gutterBottom
+                sx={{
+                  fontFamily: "Dosis",
+                  textAlign: "center",
+                  fontWeight: 800,
+                }}
+              >
+                Body Sculpting
+              </Typography>
+              <Divider />
+
+              <Typography>
+                <ul
+                  style={{
+                    listStyleType: "square",
+                    fontWeight: 300,
+                    // lineHeight: 2,
+                    fontSize: "1.1rem",
+                    // letterSpacing: 1,
+                  }}
+                >
+                  Body sculpting is a unique, stand alone procedure that targets
+                  stubborn, hard to get rid of fat pockets without any downtime,
+                  pain, or side effects. Discover a superior solution to improve
+                  the appearance of cellulite, improve elasticity and firmness
+                  of skin, and help target specific areas.
+                  <li>Same day results</li>
+                  <li>no surgery</li>
+                  <li>no pain</li>
+                  <li>no downtime </li>
+                </ul>
+              </Typography>
+            </CardContent> */}
+          </Stack>
+
+
+          <Box
+      display="flex"
+      // flexDirection={!!reverse ? 'row-reverse' : 'row'}
+      justifyContent="space-evenly"
+      alignContent="space-between"
+      margin="10px 0"
+      // width="-webkit-fill-available"
+      flex="1 auto"
+    >
+
+<img
+          alt=""
+          src={circJaya}
+          width="45%"
+          height="auto"
+          style={{
+            alignSelf: 'flex-end',
+            minWidth: 350,
+            paddingBlock: '10px',
+            flexGrow: 0,
+            marginInline: 20
+          }}
+        />
+
+
+ <CardContent sx={{alignItems:"center"}} >
+      <Typography color="textPrimary" variant="h5" gutterBottom>
+      Body Sculpting
+      </Typography>
+      <Divider />
+      <Typography>
+          Body sculpting is a unique, stand alone procedure that targets
+                  stubborn, hard to get rid of fat pockets without any downtime,
+                  pain, or side effects. Discover a superior solution to improve
+                  the appearance of cellulite, improve elasticity and firmness
+                  of skin, and help target specific areas.
+      </Typography>
+     
+      <Typography>
+                <ul
+                  style={{
+                    listStyleType: "square",
+                    fontWeight: 300,
+                    // lineHeight: 2,
+                    fontSize: "1.1rem",
+                    // letterSpacing: 1,
+                  }}
+                >
+                
+                  <li>Same day results</li>
+                  <li>no surgery</li>
+                  <li>no pain</li>
+                  <li>no downtime </li>
+                </ul>
+              </Typography>
+    </CardContent>
+
+    <img
+          alt=""
+          src={grimgJaya}
+          width="45%"
+          height="auto"
+          style={{
+            alignSelf: 'center',
+            minWidth: 350,
+            paddingBlock: '10px',
+            flexGrow: 0,
+            marginInline: 20
+          }}
+        />
+      </Box>
+
+
+
+
+
+
+          <Stack direction="row" gap={3} alignItems="center">
+            <CardContent>
+              <Typography
+                color="textPrimary"
+                variant="h4"
+                gutterBottom
+                sx={{
+                  fontFamily: "Dosis",
+                  textAlign: "center",
+                  fontWeight: 800,
+                }}
+              >
+                Transform
+              </Typography>
+              <Divider />
+              <Typography>
+                <ul
+                  style={{
+                    listStyleType: "square",
+                    fontWeight: 300,
+                    // lineHeight: 2,
+                    fontSize: "1.1rem",
+                    // letterSpacing: 1,
+                  }}
+                >
+                  Enjoy full-body confidence with this safe, non-invasive
+                  procedure that has zero down-time and is completely painless.
                   <li>Eliminate stubborn fat pockets</li>
                   <li>Reduce and smooth cellulite</li>
                   <li>Sculpt and reshape your body</li>
@@ -309,16 +630,18 @@ function App() {
                   <li>Improve skin elasticity and firmness</li>
                 </ul>
               </Typography>
-
-              <Typography>
-                Same day results no surgery no pain no downtime Body sculpting
-                is a unique, stand alone procedure that targets stubborn, hard
-                to get rid of fat pockets without any downtime, pain, or side
-                effects. Discover a superior solution to improve the appearance
-                of cellulite, improve elasticity and firmness of skin, and help
-                target specific areas.
-              </Typography>
             </CardContent>
+            {/* <div
+              style={{
+                backgroundSize: "cover",
+                backgroundImage: `url(${grimgJaya})`,
+
+                backgroundPosition: "center",
+                width: "100%",
+                height: "100vh",
+                marginBottom: "10px",
+              }}
+            /> */}
           </Stack>
         </Container>
         {/* <div style={{
@@ -333,7 +656,7 @@ function App() {
 
 
             </div> */}
-        <img
+        {/* <img
           src={grimgJaya}
           alt="imgB"
           style={{
@@ -342,18 +665,33 @@ function App() {
             width: "25em",
             // maxHeight: "8em",
           }}
-        />
+        /> */}
 
-        <p>
-          <Typography
+        <div>
+          <CardContent>
+            <Typography
+              color="textPrimary"
+              variant="h4"
+              gutterBottom
+              sx={{
+                fontFamily: "Dosis",
+                textAlign: "center",
+                fontWeight: 800,
+              }}
+            >
+              Our Treatments
+            </Typography>
+            <Divider />
+
+            {/* <Typography
             variant="h4"
             sx={{ fontFamily: "Dosis", textAlign: "center" }}
           >
             Our Treatments
-          </Typography>
-          <Divider sx={{ marginBottom: 3 }} />
+          </Typography> */}
+            {/* <Divider sx={{ marginBottom: 3 }} /> */}
 
-          {/* <CardContent>
+            {/* <CardContent>
             <Typography
               color="textPrimary"
               // variant="h4"
@@ -373,65 +711,112 @@ function App() {
             </Typography>
           </CardContent> */}
 
-          <Stack direction="row">
-            <Card sx={{ m: 3, p: 3 }}>
-              <Typography
-                gutterBottom
-                sx={{ fontFamily: "Podkova", fontWeight: "bold" }}
-              >
-                Cavitation
-              </Typography>
-              <Typography gutterBottom sx={{ fontFamily: "Arvo" }}>
-                Lipo Cavitation is a non-surgical, non-invasive technology that
-                utilizes sound waves to break down and eliminate fat cells. This
-                procedure is a safer alternative to surgical options, like
-                liposuction. The treatment uses ultrasonic radio waves to break
-                apart fat cells, which are then absorbed into your body by your
-                lymphatic system.
-              </Typography>
-            </Card>
 
-            <Card sx={{ m: 3, p: 3 }}>
-              <Typography sx={{ fontFamily: "Podkova", fontWeight: "bold" }}>
-                Laser Lipolysis
-              </Typography>
-              <Typography gutterBottom sx={{ fontFamily: "Arvo" }}>
-                Laser lipolysis is a minimally invasive procedure that uses heat
-                from fiber-optic lasers at various wavelengths to melt body fat.
-                The added benefit of laser lipolysis is that it spurs the
-                production of the protein collagen, making skin more taut.
-              </Typography>
-            </Card>
-          </Stack>
+<Dialog open={!!selected} onClose={() => setSelected(undefined)}>
+<Box
+          justifyContent="space-between"
+          padding="25px"
+          width="300px"
+          letterSpacing={0.3}
+        >
 
-          <Stack direction="row">
-            <Card sx={{ m: 3, p: 3, mt: 0 }}>
-              <Typography sx={{ fontFamily: "Podkova", fontWeight: "bold" }}>
-                Radio-Frequency
-              </Typography>
-              <Typography gutterBottom sx={{ fontFamily: "Arvo" }}>
-                Radio Frequency facial skin tightening is a minimally invasive
-                procedure that tightens the skin and improves tone without any
-                pain or downtime. Radio Frequency (RF) facial treatments work by
-                using heat to trigger collagen and elastin production in the
-                skin's deeper levels.
-              </Typography>
-            </Card>
+          <Box>{selected?.textBack}</Box>
+        </Box>
 
-            <Card sx={{ m: 3, p: 3, mt: 0 }}>
-              <Typography sx={{ fontFamily: "Podkova", fontWeight: "bold" }}>
-                Wood Therapy
-              </Typography>
-              <Typography sx={{ fontFamily: "Arvo" }}>
-                Wood therapy is a vigorous massage technique that utilizes
-                wooden, handheld tools, such as rolling pins and vacuum-suction
-                cups. Purportedly, wood therapy is centuries old and originated
-                in Asia. Wood therapy increases lymphatic circulation, reducing
-                the appearance of wrinkles and cellulite.
-              </Typography>
-            </Card>
-          </Stack>
-        </p>
+  </Dialog>
+  {servicesCard.map(({image, textBack, textFront}, index) => (
+  <div key={index} title={textBack}>
+    <Box sx={{padding:"10px",
+        display:"flex",
+        flexDirection:"column",
+        alignItems:"center"
+        }}>
+      
+      
+      
+      
+
+       <Card
+    onClick={() => setSelected({image, textBack, textFront})}
+    style={{margin: '8px', cursor: 'pointer'}}
+  >
+    <Box justifyContent="center" width="230px" height="180px">
+      <img alt="" src={image} width="50px" height="50px" />
+
+      <Box>{textFront}</Box>
+    </Box>
+  </Card>
+  </Box> 
+ 
+</div>
+  ))}
+
+
+
+
+{/* 
+            <Stack direction="row">
+              <Card sx={{ m: 3, p: 3 , height:"100%", width:"50rem"}}>
+                <Typography
+                  gutterBottom
+                  sx={{ fontFamily: "Podkova", fontWeight: "bold" }}
+                >
+                  Cavitation
+                </Typography>
+                <Typography gutterBottom sx={{ fontFamily: "Arvo" }}>
+                  Lipo Cavitation is a non-surgical, non-invasive technology
+                  that utilizes sound waves to break down and eliminate fat
+                  cells. This procedure is a safer alternative to surgical
+                  options, like liposuction. The treatment uses ultrasonic radio
+                  waves to break apart fat cells, which are then absorbed into
+                  your body by your lymphatic system.
+                </Typography>
+              </Card>
+
+              <Card sx={{ m: 3, p: 3 , height:"100%", width:"50rem", alignItems:"stretch"}}>
+                <Typography sx={{ fontFamily: "Podkova", fontWeight: "bold" }}>
+                  Laser Lipolysis
+                </Typography>
+                <Typography gutterBottom sx={{ fontFamily: "Arvo" }}>
+                  Laser lipolysis is a minimally invasive procedure that uses
+                  heat from fiber-optic lasers at various wavelengths to melt
+                  body fat. The added benefit of laser lipolysis is that it
+                  spurs the production of the protein collagen, making skin more
+                  taut.
+                </Typography>
+              </Card>
+            </Stack>
+
+            <Stack direction="row">
+              <Card sx={{ m: 3, p: 3, mt: 0, width:"230px", height:"180px" }}>
+                <Typography sx={{ fontFamily: "Podkova", fontWeight: "bold" }}>
+                  Radio-Frequency
+                </Typography>
+                <Typography gutterBottom sx={{ fontFamily: "Arvo" }}>
+                  Radio Frequency facial skin tightening is a minimally invasive
+                  procedure that tightens the skin and improves tone without any
+                  pain or downtime. Radio Frequency (RF) facial treatments work
+                  by using heat to trigger collagen and elastin production in
+                  the skin's deeper levels.
+                </Typography>
+              </Card>
+
+              <Card sx={{ m: 3, p: 3, mt: 0 }}>
+                <Typography sx={{ fontFamily: "Podkova", fontWeight: "bold" }}>
+                  Wood Therapy
+                </Typography>
+                <Typography sx={{ fontFamily: "Arvo" }}>
+                  Wood therapy is a vigorous massage technique that utilizes
+                  wooden, handheld tools, such as rolling pins and
+                  vacuum-suction cups. Purportedly, wood therapy is centuries
+                  old and originated in Asia. Wood therapy increases lymphatic
+                  circulation, reducing the appearance of wrinkles and
+                  cellulite.
+                </Typography>
+              </Card>
+            </Stack> */}
+          </CardContent>
+        </div>
 
         <Stack>
           <p>
