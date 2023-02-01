@@ -13,7 +13,6 @@ import {
   AppBar,
   Card,
   CardContent,
-  CardMedia,
   Container,
   Dialog,
   Divider,
