@@ -28,6 +28,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import ScheduleIcon from '@mui/icons-material/Schedule';
 
 // import CloseIcon from "@mui/icons-material/Close";
 // import SearchIcon from "@mui/icons-material/Search";
@@ -1275,16 +1276,44 @@ function App() {
                     bodybyjaya@gmail.com
                   </Typography>
                 </Stack>
-                <Box display="flex" justifyContent="center">
+
+
+                <Stack direction="row" sx={{ mt: 2 }} >
+                  <Box
+                    sx={{
+                      paddingInline: "8px",
+                      display: "flex",
+                      alignItems: "center",
+                      fontSize: "1.1em",
+                      // color: '#c54097',
+                      // color: "#fefefe",
+                    }}
+                  >
+                    <ScheduleIcon />
+                  </Box>
                   <Button
                     href="https://bodybyjaya.as.me/schedule.php"
                     variant="contained"
                     size="small"
                     sx={{ backgroundColor: "#101010" }}
                   >
-                    Schedule Online
+                    Book an Appointment
                   </Button>
-                </Box>
+                </Stack>
+
+
+                {/* <Box display="flex" justifyContent="center">
+
+                  <ScheduleIcon/>
+                  <Button
+                    href="https://bodybyjaya.as.me/schedule.php"
+                    variant="contained"
+                    size="small"
+                    sx={{ backgroundColor: "#101010" }}
+                  >
+                    Book Appointment
+                  </Button>
+                </Box> */}
               </Box>
             </Stack>
 
