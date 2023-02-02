@@ -1,0 +1,276 @@
+import { Container } from "@mui/system";
+
+import circJaya from "../circjaya.png";
+import grimgJaya from "../grimgjaya.png";
+
+// import "./App.css";
+import { Box } from "@mui/system";
+
+import {
+  Button,
+  Card,
+  CardContent,
+  Dialog,
+  Divider,
+  Grid,
+  Stack,
+  Typography,
+} from "@mui/material";
+
+import { React, useState } from "react";
+
+import a from "../a.png";
+import b from "../b.png";
+import c from "../c.png";
+import d from "../d.png";
+
+const servicesCard = [
+  {
+    image: a,
+    header: "Cavitation",
+    textFront: "Ultrasonic waves breaks down and eliminates fat cells",
+    textBack:
+      "  Lipo Cavitation is a non-surgical, non-invasive technology that utilizes sound waves to break down and eliminate fat cells. This procedure is a safer alternative to surgical options, like liposuction. The treatment uses ultrasonic radio waves to break apart fat cells, which are then absorbed into your body by your lymphatic system. ",
+  },
+  {
+    image: b,
+    header: "Laser Lipolysis",
+    textFront:
+      "Heat from fiber-optic lasers melts body fat and spurs the production of protein collagen, making skin more taut",
+    textBack:
+      "  Laser lipolysis is a minimally invasive procedure that uses heat from fiber-optic lasers at various wavelengths to melt body fat. The added benefit of laser lipolysis is that it spurs the production of the protein collagen, making skin more taut. ",
+  },
+  {
+    image: c,
+    header: "Radio-Frequency",
+    textFront:
+      "Tighten skin and improve skin tone without any pain or downtime",
+    textBack:
+      " Radio Frequency facial skin tightening is a minimally invasive procedure that tightens the skin and improves tone without any pain or downtime. Radio Frequency (RF) facial treatments work by using heat to trigger collagen and elastin production in the skin's deeper levels. ",
+  },
+  {
+    image: d,
+    header: "Wood Therapy",
+    textFront: "Reduces the appearance of wrinkles and cellulite",
+    textBack:
+      "Wood therapy is a vigorous massage technique that utilizes wooden, handheld tools, such as rolling pins and vacuum-suction cups. Purportedly, wood therapy is centuries old and originated in Asia. Wood therapy increases lymphatic circulation, reducing the appearance of wrinkles and cellulite. ",
+  },
+];
+
+export function HomePage() {
+  const [selected, setSelected] = useState();
+
+  return (
+    <>
+      <Container maxWidth="xl">
+        <Box
+          display="flex"
+          justifyContent="space-evenly"
+          alignContent="space-between"
+          margin="10px 0"
+          flex="1 auto"
+        >
+          <img
+            alt=""
+            src={circJaya}
+            width="45%"
+            height="auto"
+            style={{
+              alignSelf: "center",
+              minWidth: 350,
+              paddingBlock: "10px",
+              flexGrow: 0,
+              marginInline: 20,
+            }}
+          />
+
+          <CardContent
+            sx={{ alignItems: "center", alignSelf: "center", maxWidth: 400 }}
+          >
+            <Typography
+              color="textPrimary"
+              variant="h3"
+              fontFamily="Dosis"
+              // gutterBottom
+            >
+              Body Sculpting
+            </Typography>
+            <Divider />
+            <Typography
+              fontFamily="Helvetica Neue"
+              sx={{ pt: 1, fontSize: "1.1rem" }}
+            >
+              Body sculpting is a unique, stand alone procedure that targets
+              stubborn, hard to get rid of fat pockets without any downtime,
+              pain, or side effects. Discover a superior solution to improve the
+              appearance of cellulite, improve elasticity and firmness of skin,
+              and help target specific areas.
+            </Typography>
+
+            {/* <Typography> */}
+            <ul
+              style={{
+                // listStyleType: "square",
+                fontWeight: 300,
+                lineHeight: 1.5,
+                fontSize: "1.2rem",
+                // letterSpacing: 1,
+              }}
+            >
+              <li>Same day results</li>
+              <li>no surgery</li>
+              <li>no pain</li>
+              <li>no downtime </li>
+            </ul>
+            {/* </Typography> */}
+
+            <Box display="flex" justifyContent="center" sx={{ mt: 2 }}>
+              <Button
+                href="https://bodybyjaya.as.me/schedule.php"
+                variant="contained"
+                sx={{ backgroundColor: "#101010" }}
+              >
+                Schedule Now
+              </Button>
+            </Box>
+          </CardContent>
+        </Box>
+
+        <Box
+          display="flex"
+          justifyContent="space-evenly"
+          alignContent="space-between"
+          margin="10px 0"
+          flex="1 auto"
+        >
+          <Stack direction="row" gap={3} alignItems="center">
+            <CardContent
+              sx={{ alignItems: "center", alignSelf: "center", maxWidth: 400 }}
+            >
+              <Typography
+                color="textPrimary"
+                variant="h3"
+                fontFamily="Dosis"
+                // gutterBottom
+                sx={
+                  {
+                    // fontFamily: "Dosis",
+                    // textAlign: "center",
+                    // fontWeight: 800,
+                  }
+                }
+              >
+                Transform
+              </Typography>
+              <Divider />
+              <Typography
+                fontFamily="Helvetica Neue"
+                sx={{ pt: 1, fontSize: "1.1rem" }}
+              >
+                Enjoy full-body confidence with this safe, non-invasive
+                procedure that has zero down-time and is completely painless.
+              </Typography>
+
+              {/* <Typography> */}
+              <ul
+                style={{
+                  // listStyleType: "square",
+                  fontWeight: 300,
+                  lineHeight: 1.5,
+                  fontSize: "1.1rem",
+                }}
+              >
+                <li>Eliminate stubborn fat pockets</li>
+                <li>Reduce and smooth cellulite</li>
+                <li>Sculpt and reshape your body</li>
+                <li>Tighten and tone loose, sagging skin</li>
+                <li>Improve skin elasticity and firmness</li>
+              </ul>
+
+              <Box display="flex" justifyContent="center" sx={{ mt: 2 }}>
+                <Button
+                  href="https://bodybyjaya.as.me/schedule.php"
+                  variant="contained"
+                  sx={{ backgroundColor: "#101010" }}
+                >
+                  Schedule Now
+                </Button>
+              </Box>
+            </CardContent>
+          </Stack>
+
+          <img
+            alt=""
+            src={grimgJaya}
+            width="45%"
+            height="auto"
+            style={{
+              alignSelf: "center",
+              minWidth: 350,
+              paddingBlock: "10px",
+              flexGrow: 0,
+              marginInline: 20,
+            }}
+          />
+        </Box>
+      </Container>
+      <Container maxWidth="xl">
+        <Typography
+          color="textPrimary"
+          variant="h4"
+          // gutterBottom
+          sx={{
+            fontFamily: "Dosis",
+            textAlign: "center",
+            fontWeight: 800,
+          }}
+        >
+          Our Treatments
+        </Typography>
+        <Divider />
+
+        <Dialog open={!!selected} onClose={() => setSelected(undefined)}>
+          <Box
+            justifyContent="space-between"
+            padding="25px"
+            width="300px"
+            letterSpacing={0.3}
+          >
+            <Box>{selected?.textBack}</Box>
+          </Box>
+        </Dialog>
+
+        <Grid
+          container
+          spacing={2}
+          direction="row"
+          justify="flex-start"
+          alignItems="flex-start"
+          mt={2}
+        >
+          {servicesCard.map(({ image, header, textBack, textFront }, index) => (
+            <Grid item xs={12} sm={6} md={3} key={index} title={textBack}>
+              <Card
+                onClick={() =>
+                  setSelected({ image, header, textBack, textFront })
+                }
+                style={{ margin: "8px", cursor: "pointer" }}
+              >
+                <Box justifyContent="center" width="230px" height="180px">
+                  <img alt="" src={image} width="50px" height="50px" />
+                  <Box textAlign="center">{header}</Box>
+
+                  <Box>{textFront}</Box>
+                </Box>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+
+      <Box display="flex" justifyContent="center" sx={{ my: 2 }}>
+        <Typography>Learn more about our treatments</Typography>
+      </Box>
+    </>
+  );
+}
