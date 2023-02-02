@@ -1,5 +1,5 @@
 import { Box, Container } from "@mui/system";
-import { Button, CardContent, Stack, Typography } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
 
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -53,8 +53,14 @@ export function ContactPage() {
         </div>
       </Box>
       <QuestContact />
-      <CardContent>
-        <Stack direction="row" justifyContent="space-evenly" mt={2}>
+
+      <Container maxWidth="md">
+        <Stack
+          direction={{ xs: "column", sm: "row" }}
+          spacing={3}
+          justifyContent="space-evenly"
+          mt={2}
+        >
           <div>
             <Typography fontFamily="Dosis" variant="h5">
               Our Hours
@@ -156,17 +162,18 @@ export function ContactPage() {
             </Box>
           </div>
         </Stack>
-        <Box display="flex" justifyContent="center" sx={{ mt: 2 }}>
-          <Button
-            href="https://bodybyjaya.as.me/schedule.php"
-            variant="contained"
-            size="small"
-            sx={{ backgroundColor: "#101010" }}
-          >
-            Schedule Online
-          </Button>
-        </Box>
-      </CardContent>
+      </Container>
+
+      <Box display="flex" justifyContent="center" sx={{ my: 2 }}>
+        <Button
+          href="https://bodybyjaya.as.me/schedule.php"
+          variant="contained"
+          size="small"
+          sx={{ backgroundColor: "#101010" }}
+        >
+          Schedule Online
+        </Button>
+      </Box>
     </Container>
   );
 }

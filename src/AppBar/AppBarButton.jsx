@@ -17,8 +17,8 @@ export function AppBarButton() {
 
   return (
     <>
-      <IconButton onClick={() => setGoToSection(true)} >
-        <MenuIcon sx={{color:"#fefefe"}}/>
+      <IconButton onClick={() => setGoToSection(true)}>
+        <MenuIcon sx={{ color: "#fefefe" }} />
       </IconButton>
 
       <Drawer
@@ -42,9 +42,15 @@ export function AppBarButton() {
               }}
             >
               <ListItem disableGutters>
-                <ListItemButton
-                // href={`/${item.projectId}`}
-                >
+                <ListItemButton href="/Home">
+                  <ListItemText> Home</ListItemText>
+
+                  <ChevronRightIcon />
+                </ListItemButton>
+              </ListItem>
+
+              <ListItem disableGutters>
+                <ListItemButton href="Treatments">
                   <ListItemText> Treatments</ListItemText>
 
                   <ChevronRightIcon />
@@ -52,28 +58,28 @@ export function AppBarButton() {
               </ListItem>
 
               <ListItem disableGutters>
-                <ListItemButton
-                // href={`/${item.projectId}`}
-                >
-                  <ListItemText> FAQs</ListItemText>
+                <ListItemButton href="/Reviews">
+                  <ListItemText> Reviews</ListItemText>
 
                   <ChevronRightIcon />
                 </ListItemButton>
               </ListItem>
-
               <ListItem disableGutters>
-                <ListItemButton
-                // href={`/${item.projectId}`}
-                >
+                <ListItemButton href="/Faq">
+                  <ListItemText> Faq</ListItemText>
+
+                  <ChevronRightIcon />
+                </ListItemButton>
+              </ListItem>
+              <ListItem disableGutters>
+                <ListItemButton href="/Contact">
                   <ListItemText> Contact</ListItemText>
 
                   <ChevronRightIcon />
                 </ListItemButton>
               </ListItem>
-              <Box style={{display:"flex",  alignSelf:"center"}}>
-
-              <Button>Close</Button>
-
+              <Box style={{ display: "flex", alignSelf: "center" }}>
+                <Button>Close</Button>
               </Box>
             </Grid>
           </Grid>

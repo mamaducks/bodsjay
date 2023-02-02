@@ -4,7 +4,7 @@ import { AppBar, Button, Stack, Toolbar, Typography } from "@mui/material";
 
 // import CloseIcon from "@mui/icons-material/Close";
 import { ShowSmall, NoShowSmall } from "../MediaBox.jsx";
-import { AppBarButton } from "../AppBarButton";
+import { AppBarButton } from "./AppBarButton.jsx";
 import logoJaya from "../jayalogo.png";
 
 export function AppBarMedia() {
@@ -12,7 +12,7 @@ export function AppBarMedia() {
     <>
       <ShowSmall>
         <AppBar
-          position="fixed"
+          position="sticky"
           sx={{ backgroundColor: "#101010", justifyContent: "space-between" }}
         >
           <Toolbar>
@@ -131,12 +131,13 @@ export function AppBarMedia() {
           <Button sx={{ color: "#101010" }} href="/services">
             Treatments
           </Button>
-          <Button sx={{ color: "#101010" }} href="Faq">
-            Faqs
-          </Button>
           <Button sx={{ color: "#101010" }} href="/reviews">
             Reviews
           </Button>
+          <Button sx={{ color: "#101010" }} href="Faq">
+            Faqs
+          </Button>
+
           <Button sx={{ color: "#101010" }} href="/contact">
             Contact Us
           </Button>

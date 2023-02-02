@@ -9,10 +9,10 @@ import { Box } from "@mui/system";
 import {
   Button,
   Card,
-  CardContent,
   Dialog,
   Divider,
   Grid,
+  Link,
   Stack,
   Typography,
 } from "@mui/material";
@@ -23,6 +23,7 @@ import a from "../a.png";
 import b from "../b.png";
 import c from "../c.png";
 import d from "../d.png";
+import { NoShowSmall } from "../MediaBox";
 
 const servicesCard = [
   {
@@ -62,37 +63,30 @@ export function HomePage() {
 
   return (
     <>
-      <Container maxWidth="xl">
-        <Box
-          display="flex"
-          justifyContent="space-evenly"
-          alignContent="space-between"
-          margin="10px 0"
-          flex="1 auto"
+      <Container maxWidth="md">
+        <Stack
+          direction={{ xs: "column", sm: "row" }}
+          justifyContent="space-around"
+          pt={4}
         >
-          <img
-            alt=""
-            src={circJaya}
-            width="45%"
-            height="auto"
-            style={{
-              alignSelf: "center",
-              minWidth: 350,
-              paddingBlock: "10px",
-              flexGrow: 0,
-              marginInline: 20,
-            }}
-          />
+          <NoShowSmall>
+            <img
+              alt=""
+              src={circJaya}
+              width="45%"
+              height="auto"
+              style={{
+                alignSelf: "center",
+                minWidth: 350,
+                paddingBlock: "10px",
+                marginInline: 20,
+                // alignItems: "center",
+              }}
+            />
+          </NoShowSmall>
 
-          <CardContent
-            sx={{ alignItems: "center", alignSelf: "center", maxWidth: 400 }}
-          >
-            <Typography
-              color="textPrimary"
-              variant="h3"
-              fontFamily="Dosis"
-              // gutterBottom
-            >
+          <Box alignSelf="center" sx={{ maxWidth: 350, alignItems: "center" }}>
+            <Typography color="textPrimary" variant="h3" fontFamily="Dosis">
               Body Sculpting
             </Typography>
             <Divider />
@@ -107,7 +101,6 @@ export function HomePage() {
               and help target specific areas.
             </Typography>
 
-            {/* <Typography> */}
             <ul
               style={{
                 // listStyleType: "square",
@@ -122,7 +115,6 @@ export function HomePage() {
               <li>no pain</li>
               <li>no downtime </li>
             </ul>
-            {/* </Typography> */}
 
             <Box display="flex" justifyContent="center" sx={{ mt: 2 }}>
               <Button
@@ -133,86 +125,81 @@ export function HomePage() {
                 Schedule Now
               </Button>
             </Box>
-          </CardContent>
-        </Box>
+          </Box>
+        </Stack>
 
-        <Box
-          display="flex"
-          justifyContent="space-evenly"
-          alignContent="space-between"
-          margin="10px 0"
-          flex="1 auto"
+        <Stack
+          direction={{ xs: "column", sm: "row" }}
+          justifyContent="space-around"
+          pt={4}
         >
-          <Stack direction="row" gap={3} alignItems="center">
-            <CardContent
-              sx={{ alignItems: "center", alignSelf: "center", maxWidth: 400 }}
-            >
-              <Typography
-                color="textPrimary"
-                variant="h3"
-                fontFamily="Dosis"
-                // gutterBottom
-                sx={
-                  {
-                    // fontFamily: "Dosis",
-                    // textAlign: "center",
-                    // fontWeight: 800,
-                  }
+          <Box
+            sx={{ maxWidth: 350, alignItems: "center", alignSelf: "center" }}
+          >
+            <Typography
+              color="textPrimary"
+              variant="h3"
+              fontFamily="Dosis"
+              sx={
+                {
+                  // fontFamily: "Dosis",
+                  // textAlign: "center",
+                  // fontWeight: 800,
                 }
-              >
-                Transform
-              </Typography>
-              <Divider />
-              <Typography
-                fontFamily="Helvetica Neue"
-                sx={{ pt: 1, fontSize: "1.1rem" }}
-              >
-                Enjoy full-body confidence with this safe, non-invasive
-                procedure that has zero down-time and is completely painless.
-              </Typography>
+              }
+            >
+              Transform
+            </Typography>
+            <Divider />
+            <Typography
+              fontFamily="Helvetica Neue"
+              sx={{ pt: 1, fontSize: "1.1rem" }}
+            >
+              Enjoy full-body confidence with this safe, non-invasive procedure
+              that has zero down-time and is completely painless.
+            </Typography>
 
-              {/* <Typography> */}
-              <ul
-                style={{
-                  // listStyleType: "square",
-                  fontWeight: 300,
-                  lineHeight: 1.5,
-                  fontSize: "1.1rem",
-                }}
+            <ul
+              style={{
+                // listStyleType: "square",
+                fontWeight: 300,
+                lineHeight: 1.5,
+                fontSize: "1.1rem",
+              }}
+            >
+              <li>Eliminate stubborn fat pockets</li>
+              <li>Reduce and smooth cellulite</li>
+              <li>Sculpt and reshape your body</li>
+              <li>Tighten and tone loose, sagging skin</li>
+              <li>Improve skin elasticity and firmness</li>
+            </ul>
+
+            <Box display="flex" justifyContent="center" sx={{ mt: 2 }}>
+              <Button
+                href="https://bodybyjaya.as.me/schedule.php"
+                variant="contained"
+                sx={{ backgroundColor: "#101010" }}
               >
-                <li>Eliminate stubborn fat pockets</li>
-                <li>Reduce and smooth cellulite</li>
-                <li>Sculpt and reshape your body</li>
-                <li>Tighten and tone loose, sagging skin</li>
-                <li>Improve skin elasticity and firmness</li>
-              </ul>
+                Schedule Now
+              </Button>
+            </Box>
+          </Box>
 
-              <Box display="flex" justifyContent="center" sx={{ mt: 2 }}>
-                <Button
-                  href="https://bodybyjaya.as.me/schedule.php"
-                  variant="contained"
-                  sx={{ backgroundColor: "#101010" }}
-                >
-                  Schedule Now
-                </Button>
-              </Box>
-            </CardContent>
-          </Stack>
-
-          <img
-            alt=""
-            src={grimgJaya}
-            width="45%"
-            height="auto"
-            style={{
-              alignSelf: "center",
-              minWidth: 350,
-              paddingBlock: "10px",
-              flexGrow: 0,
-              marginInline: 20,
-            }}
-          />
-        </Box>
+          <NoShowSmall>
+            <img
+              alt=""
+              src={grimgJaya}
+              width="45%"
+              height="auto"
+              style={{
+                alignSelf: "center",
+                minWidth: 350,
+                paddingBlock: "10px",
+                marginInline: 20,
+              }}
+            />
+          </NoShowSmall>
+        </Stack>
       </Container>
       <Container maxWidth="xl">
         <Typography
@@ -223,6 +210,7 @@ export function HomePage() {
             fontFamily: "Dosis",
             textAlign: "center",
             fontWeight: 800,
+            pt: 4,
           }}
         >
           Our Treatments
@@ -269,7 +257,12 @@ export function HomePage() {
       </Container>
 
       <Box display="flex" justifyContent="center" sx={{ my: 2 }}>
-        <Typography>Learn more about our treatments</Typography>
+        <Typography>
+          <Link href="/services" mr={0.5} color="#101010">
+            Learn more
+          </Link>
+          about our treatments
+        </Typography>
       </Box>
     </>
   );

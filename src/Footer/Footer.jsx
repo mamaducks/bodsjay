@@ -15,9 +15,17 @@ export function Footer() {
       elevation={0}
       sx={{ backgroundColor: "#0d0f11", py: 4 }}
     >
-      <Stack direction="row" justifyContent="space-evenly">
+      <Stack
+        direction={{ xs: "column", sm: "row" }}
+        justifyContent="space-evenly"
+      >
         <Box>
-          <Stack direction="row" alignItems="center" gap={1}>
+          <Stack
+            direction="row"
+            alignItems="center"
+            gap={1}
+            justifyContent="center"
+          >
             <Typography
               variant="h4"
               paddingTop="8px"
