@@ -17,6 +17,7 @@ import {
   Container,
   Dialog,
   Divider,
+  Grid,
   Stack,
   Toolbar,
   Typography,
@@ -28,7 +29,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import ScheduleIcon from '@mui/icons-material/Schedule';
+import ScheduleIcon from "@mui/icons-material/Schedule";
 
 // import CloseIcon from "@mui/icons-material/Close";
 // import SearchIcon from "@mui/icons-material/Search";
@@ -302,7 +303,12 @@ function App() {
 
           <Box></Box>
           <CardContent sx={{ alignItems: "center" }}>
-            <Typography color="textPrimary" variant="h5" gutterBottom>
+            <Typography
+              color="textPrimary"
+              variant="h3"
+              fontFamily="Ms Madi"
+              // gutterBottom
+            >
               Body Sculpting
             </Typography>
             <Divider />
@@ -558,7 +564,7 @@ function App() {
                 Body Sculpting
               </Typography>
               <Divider />
-              <Typography>
+              <Typography fontFamily="Dosis">
                 Body sculpting is a unique, stand alone procedure that targets
                 stubborn, hard to get rid of fat pockets without any downtime,
                 pain, or side effects. Discover a superior solution to improve
@@ -603,10 +609,12 @@ function App() {
             <CardContent>
               <Typography
                 color="textPrimary"
-                variant="h4"
-                gutterBottom
+                // variant="h4"
+                variant="h3"
+                fontFamily="Ms Madi"
+                // gutterBottom
                 sx={{
-                  fontFamily: "Dosis",
+                  // fontFamily: "Dosis",
                   textAlign: "center",
                   fontWeight: 800,
                 }}
@@ -724,16 +732,19 @@ function App() {
                 <Box>{selected?.textBack}</Box>
               </Box>
             </Dialog>
-            {servicesCard.map(({ image, textBack, textFront }, index) => (
-              <div key={index} title={textBack}>
-                <Box
-                  sx={{
-                    padding: "10px",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  }}
-                >
+
+
+            <Grid
+              container
+              spacing={2}
+              direction="row"
+              justify="flex-start"
+              alignItems="flex-start"
+            >
+              {servicesCard.map(({ image, textBack, textFront }, index) => (
+                <Grid item xs={12} sm={6} md={3} key={index} title={textBack}>
+                 
+
                   <Card
                     onClick={() => setSelected({ image, textBack, textFront })}
                     style={{ margin: "8px", cursor: "pointer" }}
@@ -744,9 +755,11 @@ function App() {
                       <Box>{textFront}</Box>
                     </Box>
                   </Card>
-                </Box>
-              </div>
-            ))}
+
+                </Grid>
+              ))}
+            </Grid>
+
             <div>
               <Box display="flex" justifyContent="center">
                 <Button
@@ -910,8 +923,6 @@ function App() {
                 </Typography>
               </div>
             </Box>
-          
-
             <Stack direction="row" justifyContent="space-evenly" mt={2}>
               <div>
                 <Typography fontFamily="Dosis" variant="h5">
@@ -1080,21 +1091,20 @@ function App() {
                       5434 King Avenue Pennsauken NJ 09109
                     </Typography>
                   </Stack>
-
-                
                 </Box>
               </div>
-            </Stack>  <Box display="flex" justifyContent="center" sx={{ mt: 2 }}>
-                    <Button
-                      href="https://bodybyjaya.as.me/schedule.php"
-                      variant="contained"
-                      size="small"
-                      sx={{ backgroundColor: "#101010" }}
-                    >
-                      Schedule Online
-                    </Button>
-                    {/* <InstagramIcon sx={{ color: "#0d0f11" }} /> */}
-                  </Box>
+            </Stack>{" "}
+            <Box display="flex" justifyContent="center" sx={{ mt: 2 }}>
+              <Button
+                href="https://bodybyjaya.as.me/schedule.php"
+                variant="contained"
+                size="small"
+                sx={{ backgroundColor: "#101010" }}
+              >
+                Schedule Online
+              </Button>
+              {/* <InstagramIcon sx={{ color: "#0d0f11" }} /> */}
+            </Box>
           </CardContent>
         </Container>
 
@@ -1149,36 +1159,37 @@ function App() {
             <Divider />
           </CardContent>
         </Box> */}
+      </Container>
 
-        <>
-          <AppBar
-            position="sticky"
-            elevation={0}
-            sx={{ backgroundColor: "#0d0f11", pb: 4 }}
-          >
-            <Box alignSelf="center" paddingTop="5px">
-              <CardContent
-              // style={{ padding: "0px" }}
+      <>
+        <AppBar
+          position="sticky"
+          elevation={0}
+          sx={{ backgroundColor: "#0d0f11", pb: 4 }}
+        >
+          <Box alignSelf="center" paddingTop="5px">
+            <CardContent
+            // style={{ padding: "0px" }}
+            >
+              <Typography
+                color="#fefefe"
+                variant="h6"
+                gutterBottom
+                style={{ alignItems: "center", flexWrap: "nowrap" }}
               >
-                <Typography
-                  color="#fefefe"
-                  variant="h6"
-                  gutterBottom
-                  style={{ alignItems: "center", flexWrap: "nowrap" }}
-                >
-                  Contact us today to schedule! We'd
-                  <FavoriteIcon
-                    fontSize="1.1rem"
-                    // color="#a71976"
-                    style={{ paddingInline: "8px", textAlign: "center" }}
-                  />
-                  to hear from you!
-                </Typography>
+                Contact us today to schedule! We'd
+                <FavoriteIcon
+                  fontSize="1.1rem"
+                  // color="#a71976"
+                  style={{ paddingInline: "8px", textAlign: "center" }}
+                />
+                to hear from you!
+              </Typography>
 
-                {/* <Divider /> */}
-              </CardContent>
-            </Box>
-            {/* <Box
+              {/* <Divider /> */}
+            </CardContent>
+          </Box>
+          {/* <Box
               display="flex"
               // color="#a71976"
               color="#fefefe"
@@ -1186,123 +1197,121 @@ function App() {
               flexWrap="wrap"
               // alignContent="center"
             > */}
-            {/* <Box textAlign="center" flex="auto" paddingTop="10px"> */}
-            <Stack direction="row" justifyContent="space-evenly">
-              <Box>
-                <Stack direction="row" alignItems="center" gap={1}>
-                  <Typography
-                    variant="h4"
-                    paddingTop="8px"
-                    paddingBottom="1px"
-                    fontFamily="Ms Madi"
-                    gutterBottom
-                  >
-                    Body
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    paddingTop="8px"
-                    paddingBottom="1px"
-                    fontFamily="Dosis"
-                  >
-                    by Jaya
-                  </Typography>
-                </Stack>
-                <Stack
-                  direction="row"
-                  alignSelf="center"
-                  gap={3}
-                  justifyContent="center"
+          {/* <Box textAlign="center" flex="auto" paddingTop="10px"> */}
+          <Stack direction="row" justifyContent="space-evenly">
+            <Box>
+              <Stack direction="row" alignItems="center" gap={1}>
+                <Typography
+                  variant="h4"
+                  paddingTop="8px"
+                  paddingBottom="1px"
+                  fontFamily="Ms Madi"
+                  gutterBottom
                 >
-                  <a href="https://www.facebook.com/profile.php?id=100089984763471&mibextid=LQQJ4d">
-                    <FacebookIcon sx={{ color: "#fefefe" }} />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/bodybyjaya/?igshid=YmMyMTA2M2Y%3D"
-                    className="instagram social"
-                  >
-                    <InstagramIcon sx={{ color: "#fefefe" }} />
-                  </a>
-                </Stack>
-              </Box>
+                  Body
+                </Typography>
+                <Typography
+                  variant="body1"
+                  paddingTop="8px"
+                  paddingBottom="1px"
+                  fontFamily="Dosis"
+                >
+                  by Jaya
+                </Typography>
+              </Stack>
+              <Stack
+                direction="row"
+                alignSelf="center"
+                gap={3}
+                justifyContent="center"
+              >
+                <a href="https://www.facebook.com/profile.php?id=100089984763471&mibextid=LQQJ4d">
+                  <FacebookIcon sx={{ color: "#fefefe" }} />
+                </a>
+                <a
+                  href="https://www.instagram.com/bodybyjaya/?igshid=YmMyMTA2M2Y%3D"
+                  className="instagram social"
+                >
+                  <InstagramIcon sx={{ color: "#fefefe" }} />
+                </a>
+              </Stack>
+            </Box>
 
-              <Box alignSelf="center">
-                <Stack direction="row" gap={1} sx={{ mt: 2 }}>
-                  <Box
-                    sx={{
-                      paddingInline: "8px",
-                      display: "flex",
-                      alignItems: "center",
-                      fontSize: "1.1em",
-                      // color: '#c54097',
-                      color: "#fefefe",
-                    }}
-                  >
-                    <PhoneAndroidIcon />
-                  </Box>
-                  <Typography
-                    variant="body1"
-                    sx={{
-                      display: "flex",
-                      // color: '#c54097',
-                      // color: "#fefefe",
-                    }}
-                  >
-                    1-856-357-5954
-                  </Typography>
-                </Stack>
+            <Box alignSelf="center">
+              <Stack direction="row" gap={1} sx={{ mt: 2 }}>
+                <Box
+                  sx={{
+                    paddingInline: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    fontSize: "1.1em",
+                    // color: '#c54097',
+                    color: "#fefefe",
+                  }}
+                >
+                  <PhoneAndroidIcon />
+                </Box>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    display: "flex",
+                    // color: '#c54097',
+                    // color: "#fefefe",
+                  }}
+                >
+                  1-856-357-5954
+                </Typography>
+              </Stack>
 
-                <Stack direction="row" sx={{ mt: 2 }} gap={1}>
-                  <Box
-                    sx={{
-                      paddingInline: "8px",
-                      display: "flex",
-                      alignItems: "center",
-                      fontSize: "1.1em",
-                      // color: '#c54097',
-                      // color: "#fefefe",
-                    }}
-                  >
-                    <EmailIcon />
-                  </Box>
-                  <Typography
-                    variant="body1"
-                    sx={{
-                      display: "flex",
-                      // color: '#c54097',
-                      color: "#fefefe",
-                    }}
-                  >
-                    bodybyjaya@gmail.com
-                  </Typography>
-                </Stack>
+              <Stack direction="row" sx={{ mt: 2 }} gap={1}>
+                <Box
+                  sx={{
+                    paddingInline: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    fontSize: "1.1em",
+                    // color: '#c54097',
+                    // color: "#fefefe",
+                  }}
+                >
+                  <EmailIcon />
+                </Box>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    display: "flex",
+                    // color: '#c54097',
+                    color: "#fefefe",
+                  }}
+                >
+                  bodybyjaya@gmail.com
+                </Typography>
+              </Stack>
 
+              <Stack direction="row" sx={{ mt: 2 }}>
+                <Box
+                  sx={{
+                    paddingInline: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    fontSize: "1.1em",
+                    // color: '#c54097',
+                    // color: "#fefefe",
+                  }}
+                >
+                  <ScheduleIcon />
+                </Box>
+                <Button
+                  href="https://bodybyjaya.as.me/schedule.php"
+                  variant="contained"
+                  size="small"
+                  sx={{ backgroundColor: "#101010" }}
+                >
+                  Book an Appointment
+                </Button>
+              </Stack>
 
-                <Stack direction="row" sx={{ mt: 2 }} >
-                  <Box
-                    sx={{
-                      paddingInline: "8px",
-                      display: "flex",
-                      alignItems: "center",
-                      fontSize: "1.1em",
-                      // color: '#c54097',
-                      // color: "#fefefe",
-                    }}
-                  >
-                    <ScheduleIcon />
-                  </Box>
-                  <Button
-                    href="https://bodybyjaya.as.me/schedule.php"
-                    variant="contained"
-                    size="small"
-                    sx={{ backgroundColor: "#101010" }}
-                  >
-                    Book an Appointment
-                  </Button>
-                </Stack>
-
-
-                {/* <Box display="flex" justifyContent="center">
+              {/* <Box display="flex" justifyContent="center">
 
                   <ScheduleIcon/>
                   <Button
@@ -1314,12 +1323,12 @@ function App() {
                     Book Appointment
                   </Button>
                 </Box> */}
-              </Box>
-            </Stack>
+            </Box>
+          </Stack>
 
-            {/* </Box> */}
+          {/* </Box> */}
 
-            {/* 
+          {/* 
               <div
                 style={{
                   display: "flex",
@@ -1329,11 +1338,10 @@ function App() {
                 }}
               > */}
 
-            {/* </div> */}
-            {/* </Box> */}
-          </AppBar>
-        </>
-      </Container>
+          {/* </div> */}
+          {/* </Box> */}
+        </AppBar>
+      </>
     </>
   );
 }
