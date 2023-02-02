@@ -50,7 +50,7 @@ export function AppBarButton() {
               </ListItem>
 
               <ListItem disableGutters>
-                <ListItemButton href="services">
+                <ListItemButton href="/services">
                   <ListItemText> Treatments</ListItemText>
 
                   <ChevronRightIcon />
