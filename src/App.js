@@ -301,8 +301,7 @@ function App() {
             }}
           />
 
-          <Box></Box>
-          <CardContent sx={{ alignItems: "center" }}>
+          <CardContent sx={{ alignItems: "center", alignSelf:"center", maxWidth:400 }}>
             <Typography
               color="textPrimary"
               variant="h3"
@@ -545,7 +544,7 @@ function App() {
             // width="-webkit-fill-available"
             flex="1 auto"
           >
-            <img
+            {/* <img
               alt=""
               src={circJaya}
               width="45%"
@@ -557,38 +556,60 @@ function App() {
                 flexGrow: 0,
                 marginInline: 20,
               }}
-            />
+            /> */}
 
-            <CardContent sx={{ alignItems: "center" }}>
-              <Typography color="textPrimary" variant="h5" gutterBottom>
-                Body Sculpting
-              </Typography>
-              <Divider />
-              <Typography fontFamily="Dosis">
-                Body sculpting is a unique, stand alone procedure that targets
-                stubborn, hard to get rid of fat pockets without any downtime,
-                pain, or side effects. Discover a superior solution to improve
-                the appearance of cellulite, improve elasticity and firmness of
-                skin, and help target specific areas.
-              </Typography>
-
-              <Typography>
-                <ul
-                  style={{
-                    listStyleType: "square",
-                    fontWeight: 300,
-                    // lineHeight: 2,
-                    fontSize: "1.1rem",
-                    // letterSpacing: 1,
+            <Stack direction="row" gap={3} alignItems="center">
+              <CardContent sx={{ alignItems: "center", alignSelf:"center", maxWidth:400 }}>
+                <Typography
+                  color="textPrimary"
+                  // variant="h4"
+                  variant="h3"
+                  fontFamily="Ms Madi"
+                  // gutterBottom
+                  sx={{
+                    // fontFamily: "Dosis",
+                    // textAlign: "center",
+                    // fontWeight: 800,
                   }}
                 >
-                  <li>Same day results</li>
-                  <li>no surgery</li>
-                  <li>no pain</li>
-                  <li>no downtime </li>
-                </ul>
-              </Typography>
-            </CardContent>
+                  Transform
+                </Typography>
+                <Divider />
+                <Typography>
+                  Enjoy full-body confidence with this safe, non-invasive
+                  procedure that has zero down-time and is completely painless.
+                </Typography>
+
+                <Typography>
+                  <ul
+                    style={{
+                      listStyleType: "square",
+                      fontWeight: 300,
+                      // lineHeight: 2,
+                      fontSize: "1.1rem",
+                      // letterSpacing: 1,
+                    }}
+                  >
+                    <li>Eliminate stubborn fat pockets</li>
+                    <li>Reduce and smooth cellulite</li>
+                    <li>Sculpt and reshape your body</li>
+                    <li>Tighten and tone loose, sagging skin</li>
+                    <li>Improve skin elasticity and firmness</li>
+                  </ul>
+                </Typography>
+              </CardContent>
+              {/* <div
+              style={{
+                backgroundSize: "cover",
+                backgroundImage: `url(${grimgJaya})`,
+
+                backgroundPosition: "center",
+                width: "100%",
+                height: "100vh",
+                marginBottom: "10px",
+              }}
+            /> */}
+            </Stack>
 
             <img
               alt=""
@@ -605,55 +626,7 @@ function App() {
             />
           </Box>
 
-          <Stack direction="row" gap={3} alignItems="center">
-            <CardContent>
-              <Typography
-                color="textPrimary"
-                // variant="h4"
-                variant="h3"
-                fontFamily="Ms Madi"
-                // gutterBottom
-                sx={{
-                  // fontFamily: "Dosis",
-                  textAlign: "center",
-                  fontWeight: 800,
-                }}
-              >
-                Transform
-              </Typography>
-              <Divider />
-              <Typography>
-                <ul
-                  style={{
-                    listStyleType: "square",
-                    fontWeight: 300,
-                    // lineHeight: 2,
-                    fontSize: "1.1rem",
-                    // letterSpacing: 1,
-                  }}
-                >
-                  Enjoy full-body confidence with this safe, non-invasive
-                  procedure that has zero down-time and is completely painless.
-                  <li>Eliminate stubborn fat pockets</li>
-                  <li>Reduce and smooth cellulite</li>
-                  <li>Sculpt and reshape your body</li>
-                  <li>Tighten and tone loose, sagging skin</li>
-                  <li>Improve skin elasticity and firmness</li>
-                </ul>
-              </Typography>
-            </CardContent>
-            {/* <div
-              style={{
-                backgroundSize: "cover",
-                backgroundImage: `url(${grimgJaya})`,
-
-                backgroundPosition: "center",
-                width: "100%",
-                height: "100vh",
-                marginBottom: "10px",
-              }}
-            /> */}
-          </Stack>
+        
         </Container>
         {/* <div style={{
               backgroundSize: "cover",
@@ -683,7 +656,7 @@ function App() {
             <Typography
               color="textPrimary"
               variant="h4"
-              gutterBottom
+              // gutterBottom
               sx={{
                 fontFamily: "Dosis",
                 textAlign: "center",
@@ -693,6 +666,7 @@ function App() {
               Our Treatments
             </Typography>
             <Divider />
+            <br />
 
             {/* <Typography
             variant="h4"
@@ -733,7 +707,6 @@ function App() {
               </Box>
             </Dialog>
 
-
             <Grid
               container
               spacing={2}
@@ -743,8 +716,6 @@ function App() {
             >
               {servicesCard.map(({ image, textBack, textFront }, index) => (
                 <Grid item xs={12} sm={6} md={3} key={index} title={textBack}>
-                 
-
                   <Card
                     onClick={() => setSelected({ image, textBack, textFront })}
                     style={{ margin: "8px", cursor: "pointer" }}
@@ -755,13 +726,12 @@ function App() {
                       <Box>{textFront}</Box>
                     </Box>
                   </Card>
-
                 </Grid>
               ))}
             </Grid>
 
             <div>
-              <Box display="flex" justifyContent="center">
+              <Box display="flex" justifyContent="center" sx={{ mt: 2 }}>
                 <Button
                   href="https://bodybyjaya.as.me/schedule.php"
                   variant="contained"
@@ -1093,7 +1063,7 @@ function App() {
                   </Stack>
                 </Box>
               </div>
-            </Stack>{" "}
+            </Stack>
             <Box display="flex" justifyContent="center" sx={{ mt: 2 }}>
               <Button
                 href="https://bodybyjaya.as.me/schedule.php"
@@ -1160,35 +1130,34 @@ function App() {
           </CardContent>
         </Box> */}
       </Container>
+      <Box display="flex" justifyContent="center" paddingTop="5px">
+        <CardContent
+        // style={{ padding: "0px" }}
+        >
+          <Typography
+            // color="#fefefe"
+            variant="h6"
+            gutterBottom
+            style={{ alignItems: "center", flexWrap: "nowrap" }}
+          >
+            Contact us today to schedule! We'd
+            <FavoriteIcon
+              fontSize="1.1rem"
+              // color="#a71976"
+              style={{ paddingInline: "8px", textAlign: "center" }}
+            />
+            to hear from you!
+          </Typography>
 
+          {/* <Divider /> */}
+        </CardContent>
+      </Box>
       <>
         <AppBar
           position="sticky"
           elevation={0}
-          sx={{ backgroundColor: "#0d0f11", pb: 4 }}
+          sx={{ backgroundColor: "#0d0f11", py: 4 }}
         >
-          <Box alignSelf="center" paddingTop="5px">
-            <CardContent
-            // style={{ padding: "0px" }}
-            >
-              <Typography
-                color="#fefefe"
-                variant="h6"
-                gutterBottom
-                style={{ alignItems: "center", flexWrap: "nowrap" }}
-              >
-                Contact us today to schedule! We'd
-                <FavoriteIcon
-                  fontSize="1.1rem"
-                  // color="#a71976"
-                  style={{ paddingInline: "8px", textAlign: "center" }}
-                />
-                to hear from you!
-              </Typography>
-
-              {/* <Divider /> */}
-            </CardContent>
-          </Box>
           {/* <Box
               display="flex"
               // color="#a71976"
