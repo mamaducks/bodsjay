@@ -42,7 +42,7 @@ export function AppBarButton() {
               }}
             >
               <ListItem disableGutters>
-                <ListItemButton href="/Home">
+                <ListItemButton href="/">
                   <ListItemText> Home</ListItemText>
 
                   <ChevronRightIcon />
@@ -50,7 +50,7 @@ export function AppBarButton() {
               </ListItem>
 
               <ListItem disableGutters>
-                <ListItemButton href="Treatments">
+                <ListItemButton href="services">
                   <ListItemText> Treatments</ListItemText>
 
                   <ChevronRightIcon />
@@ -58,21 +58,21 @@ export function AppBarButton() {
               </ListItem>
 
               <ListItem disableGutters>
-                <ListItemButton href="/Reviews">
+                <ListItemButton href="/reviews">
                   <ListItemText> Reviews</ListItemText>
 
                   <ChevronRightIcon />
                 </ListItemButton>
               </ListItem>
               <ListItem disableGutters>
-                <ListItemButton href="/Faq">
+                <ListItemButton href="/faq">
                   <ListItemText> Faq</ListItemText>
 
                   <ChevronRightIcon />
                 </ListItemButton>
               </ListItem>
               <ListItem disableGutters>
-                <ListItemButton href="/Contact">
+                <ListItemButton href="/contact">
                   <ListItemText> Contact</ListItemText>
 
                   <ChevronRightIcon />
