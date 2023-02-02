@@ -87,7 +87,7 @@ const servicesCard = [
   },
 ];
 
-function App() {
+export function AppOld() {
   const [selected, setSelected] = useState();
 
   return (
@@ -301,7 +301,9 @@ function App() {
             }}
           />
 
-          <CardContent sx={{ alignItems: "center", alignSelf:"center", maxWidth:400 }}>
+          <CardContent
+            sx={{ alignItems: "center", alignSelf: "center", maxWidth: 400 }}
+          >
             <Typography
               color="textPrimary"
               variant="h3"
@@ -559,18 +561,26 @@ function App() {
             /> */}
 
             <Stack direction="row" gap={3} alignItems="center">
-              <CardContent sx={{ alignItems: "center", alignSelf:"center", maxWidth:400 }}>
+              <CardContent
+                sx={{
+                  alignItems: "center",
+                  alignSelf: "center",
+                  maxWidth: 400,
+                }}
+              >
                 <Typography
                   color="textPrimary"
                   // variant="h4"
                   variant="h3"
                   fontFamily="Ms Madi"
                   // gutterBottom
-                  sx={{
-                    // fontFamily: "Dosis",
-                    // textAlign: "center",
-                    // fontWeight: 800,
-                  }}
+                  sx={
+                    {
+                      // fontFamily: "Dosis",
+                      // textAlign: "center",
+                      // fontWeight: 800,
+                    }
+                  }
                 >
                   Transform
                 </Typography>
@@ -625,8 +635,6 @@ function App() {
               }}
             />
           </Box>
-
-        
         </Container>
         {/* <div style={{
               backgroundSize: "cover",
@@ -1315,4 +1323,4 @@ function App() {
   );
 }
 
-export default App;
+// export default AppOld;
