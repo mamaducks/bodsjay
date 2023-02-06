@@ -9,6 +9,8 @@ import { Box } from "@mui/system";
 import {
   Button,
   Card,
+  CardContent,
+  CardMedia,
   Dialog,
   Divider,
   Grid,
@@ -18,31 +20,29 @@ import {
 } from "@mui/material";
 
 import { React, useState } from "react";
-
-import a from "../a.png";
-import b from "../b.png";
-import c from "../c.png";
-import d from "../d.png";
+import a from "../cavJ.png";
+import b from "../radJ.png";
+import c from "../laseJ.png";
+import d from "../woodJ.png";
 import { NoShowSmall } from "../MediaBox";
 
 const servicesCard = [
   {
     image: a,
     header: "Cavitation",
-    textFront: "Ultrasonic waves breaks down and eliminates fat cells",
+    textFront: "Break down and eliminate fat cells",
     textBack:
       "  Lipo Cavitation is a non-surgical, non-invasive technology that utilizes sound waves to break down and eliminate fat cells. This procedure is a safer alternative to surgical options, like liposuction. The treatment uses ultrasonic radio waves to break apart fat cells, which are then absorbed into your body by your lymphatic system. ",
   },
   {
-    image: b,
+    image: c,
     header: "Laser Lipolysis",
-    textFront:
-      "Heat from fiber-optic lasers melts body fat and spurs the production of protein collagen, making skin more taut",
+    textFront: "Melt away body fat and make skin more taut",
     textBack:
       "  Laser lipolysis is a minimally invasive procedure that uses heat from fiber-optic lasers at various wavelengths to melt body fat. The added benefit of laser lipolysis is that it spurs the production of the protein collagen, making skin more taut. ",
   },
   {
-    image: c,
+    image: b,
     header: "Radio-Frequency",
     textFront:
       "Tighten skin and improve skin tone without any pain or downtime",
@@ -90,10 +90,7 @@ export function HomePage() {
               Body Sculpting
             </Typography>
             <Divider />
-            <Typography
-              fontFamily="Helvetica Neue"
-              sx={{ pt: 1, fontSize: "1.1rem" }}
-            >
+            <Typography fontFamily="Oswald" sx={{ pt: 1, fontSize: "1.1rem" }}>
               Body sculpting is a unique, stand alone procedure that targets
               stubborn, hard to get rid of fat pockets without any downtime,
               pain, or side effects. Discover a superior solution to improve the
@@ -107,6 +104,7 @@ export function HomePage() {
                 fontWeight: 300,
                 lineHeight: 1.5,
                 fontSize: "1.2rem",
+                fontFamily: "Oswald",
                 // letterSpacing: 1,
               }}
             >
@@ -120,7 +118,12 @@ export function HomePage() {
               <Button
                 href="https://bodybyjaya.as.me/schedule.php"
                 variant="contained"
-                sx={{ backgroundColor: "#101010" }}
+                sx={{
+                  backgroundColor: "#101010",
+                  "&:hover": {
+                    backgroundColor: "#a2a2a2",
+                  },
+                }}
               >
                 Schedule Now
               </Button>
@@ -140,6 +143,7 @@ export function HomePage() {
               color="textPrimary"
               variant="h3"
               fontFamily="Dosis"
+              // fontWeight={300}
               sx={
                 {
                   // fontFamily: "Dosis",
@@ -151,10 +155,7 @@ export function HomePage() {
               Transform
             </Typography>
             <Divider />
-            <Typography
-              fontFamily="Helvetica Neue"
-              sx={{ pt: 1, fontSize: "1.1rem" }}
-            >
+            <Typography fontFamily="Oswald" sx={{ pt: 1, fontSize: "1.1rem" }}>
               Enjoy full-body confidence with this safe, non-invasive procedure
               that has zero down-time and is completely painless.
             </Typography>
@@ -162,6 +163,7 @@ export function HomePage() {
             <ul
               style={{
                 // listStyleType: "square",
+                fontFamily: "Oswald",
                 fontWeight: 300,
                 lineHeight: 1.5,
                 fontSize: "1.1rem",
@@ -178,7 +180,12 @@ export function HomePage() {
               <Button
                 href="https://bodybyjaya.as.me/schedule.php"
                 variant="contained"
-                sx={{ backgroundColor: "#101010" }}
+                sx={{
+                  backgroundColor: "#101010",
+                  "&:hover": {
+                    backgroundColor: "#a2a2a2",
+                  },
+                }}
               >
                 Schedule Now
               </Button>
@@ -207,6 +214,7 @@ export function HomePage() {
           variant="h4"
           // gutterBottom
           sx={{
+            // fontFamily:"Oswald",
             fontFamily: "Dosis",
             textAlign: "center",
             fontWeight: 800,
@@ -224,7 +232,7 @@ export function HomePage() {
             width="300px"
             letterSpacing={0.3}
           >
-            <Box>{selected?.textBack}</Box>
+            <Box fontFamily="Oswald">{selected?.textBack}</Box>
           </Box>
         </Dialog>
 
@@ -242,14 +250,46 @@ export function HomePage() {
                 onClick={() =>
                   setSelected({ image, header, textBack, textFront })
                 }
-                style={{ margin: "8px", cursor: "pointer" }}
+                style={{
+                  margin: "8px",
+                  cursor: "pointer",
+                  height: 290,
+                  width: "100%",
+                }}
               >
-                <Box justifyContent="center" width="230px" height="180px">
-                  <img alt="" src={image} width="50px" height="50px" />
-                  <Box textAlign="center">{header}</Box>
+                {/* <Box justifyContent="center" width="230px" height="180px"> */}
+                {/* <CardMedia
+                  image={image}
 
-                  <Box>{textFront}</Box>
-                </Box>
+                  sx={{
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                     backgroundImage: `url(${image})`
+                  }}
+                  // width="100%"
+                  height={150}
+                  title={header}
+                /> */}
+                <img alt="" src={image} width="100%" height="180px" />
+                <CardContent
+                  sx={{
+                    // alignItems: "stretch",
+                    // display: "flex",
+                    // flexDirection: "column",
+                    height: "100%",
+                  }}
+                >
+                  <Box textAlign="center" fontFamily="Dosis">
+                    {header}
+                  </Box>
+
+                  <Box fontFamily="Oswald" textAlign="center">
+                    {textFront}
+                  </Box>
+                </CardContent>
+
+                {/* </Box> */}
               </Card>
             </Grid>
           ))}
@@ -257,7 +297,7 @@ export function HomePage() {
       </Container>
 
       <Box display="flex" justifyContent="center" sx={{ my: 2 }}>
-        <Typography>
+        <Typography fontFamily="Oswald">
           <Link href="/services" mr={0.5} color="#101010">
             Learn more
           </Link>
