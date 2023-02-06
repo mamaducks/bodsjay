@@ -40,6 +40,7 @@ export function Footer() {
               paddingTop="8px"
               paddingBottom="1px"
               fontFamily="Dosis"
+              textTransform="uppercase"
             >
               by Jaya
             </Typography>
@@ -97,10 +98,12 @@ export function Footer() {
               <EmailIcon />
             </Box>
             <Typography
-              variant="body1"
+              variant="body2"
+              textTransform="uppercase"
               sx={{
                 display: "flex",
                 color: "#fefefe",
+
               }}
             >
               bodybyjaya@gmail.com

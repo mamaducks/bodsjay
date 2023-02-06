@@ -11,6 +11,7 @@ import { QuestContact } from "../QuestContact";
 export function ContactPage() {
   return (
     <Container>
+      <br/>
       <Box
         alignSelf="center"
         paddingTop="5px"
@@ -37,6 +38,7 @@ export function ContactPage() {
               paddingTop="8px"
               paddingBottom="1px"
               fontFamily="Dosis"
+              textTransform="uppercase"
             >
               by Jaya
             </Typography>
@@ -59,14 +61,15 @@ export function ContactPage() {
           direction={{ xs: "column", sm: "row" }}
           spacing={3}
           justifyContent="space-evenly"
-          mt={2}
+          mt={3}
+          mb={3}
         >
           <div>
             <Typography fontFamily="Dosis" variant="h5">
               Our Hours
             </Typography>
             <Stack direction="row" gap={2} sx={{ mt: 2 }}>
-              <Typography color="textPrimary" gutterBottom fontFamily="Oswald">
+              <Typography color="textPrimary" gutterBottom fontFamily="Oswald" textTransform= 'uppercase'>
                 Monday:
               </Typography>
               <Typography color="textSecondary" fontFamily="Oswald">
@@ -75,7 +78,7 @@ export function ContactPage() {
             </Stack>
 
             <Stack direction="row" gap={2}>
-              <Typography color="textPrimary" gutterBottom fontFamily="Oswald">
+              <Typography color="textPrimary" gutterBottom fontFamily="Oswald" textTransform= 'uppercase'>
                 Tuesday:
               </Typography>
               <Typography color="textSecondary" fontFamily="Oswald">
@@ -84,44 +87,44 @@ export function ContactPage() {
             </Stack>
 
             <Stack direction="row" gap={2}>
-              <Typography color="textPrimary" gutterBottom fontFamily="Oswald">
+              <Typography color="textPrimary" gutterBottom fontFamily="Oswald" textTransform= 'uppercase'>
                 Wednesday:
               </Typography>
-              <Typography color="textSecondary" fontFamily="Oswald">
+              <Typography  fontFamily="Oswald">
                 3pm - 7pm
               </Typography>
             </Stack>
             <Stack direction="row" gap={2}>
-              <Typography color="textPrimary" gutterBottom fontFamily="Oswald">
+              <Typography color="textPrimary" gutterBottom fontFamily="Oswald" textTransform= 'uppercase'>
                 Thursday:
               </Typography>
-              <Typography color="textSecondary" fontFamily="Oswald">
+              <Typography  fontFamily="Oswald">
                 4pm - 7pm
               </Typography>
             </Stack>
 
             <Stack direction="row" gap={2}>
-              <Typography color="textPrimary" gutterBottom fontFamily="Oswald">
+              <Typography color="textPrimary" gutterBottom fontFamily="Oswald" textTransform= 'uppercase'>
                 Friday:
               </Typography>
-              <Typography color="textSecondary" fontFamily="Oswald">
+              <Typography  fontFamily="Oswald">
                 9am - 3pm
               </Typography>
             </Stack>
             <Stack direction="row" gap={2}>
-              <Typography color="textPrimary" gutterBottom fontFamily="Oswald">
+              <Typography color="textPrimary" gutterBottom fontFamily="Oswald" textTransform= 'uppercase'>
                 Saturday:
               </Typography>
-              <Typography color="textSecondary" fontFamily="Oswald">
+              <Typography  fontFamily="Oswald">
                 9am - 3pm
               </Typography>
             </Stack>
 
             <Stack direction="row" gap={2}>
-              <Typography color="textPrimary" gutterBottom fontFamily="Oswald">
+              <Typography color="textPrimary" gutterBottom fontFamily="Oswald" textTransform= 'uppercase'>
                 Sunday:
               </Typography>
-              <Typography color="textSecondary" fontFamily="Oswald">
+              <Typography  fontFamily="Oswald">
                 9am - 3pm
               </Typography>
             </Stack>
@@ -142,7 +145,7 @@ export function ContactPage() {
 
               <Stack direction="row" sx={{ mt: 2 }} gap={1}>
                 <EmailIcon />
-                <Typography variant="body1" fontFamily="Oswald">
+                <Typography variant="body1" fontFamily="Oswald" textTransform= 'uppercase'>
                   bodybyjaya@gmail.com
                 </Typography>
               </Stack>
@@ -152,7 +155,7 @@ export function ContactPage() {
                   <FacebookIcon sx={{ color: "#0d0f11" }} />
                 </a>
 
-                <Typography variant="body1" fontFamily="Oswald">
+                <Typography variant="body1" fontFamily="Oswald" textTransform= 'uppercase'>
                   @bodybyjaya
                 </Typography>
               </Stack>
@@ -164,7 +167,7 @@ export function ContactPage() {
                 >
                   <InstagramIcon sx={{ color: "#0d0f11" }} />
                 </a>
-                <Typography variant="body1" fontFamily="Oswald">
+                <Typography variant="body1" fontFamily="Oswald"  textTransform= 'uppercase'>
                   @bodybyjaya
                 </Typography>
               </Stack>
@@ -177,6 +180,7 @@ export function ContactPage() {
                   gutterBottom
                   // fontFamily="Dosis"
                   fontFamily="Oswald"
+                  textTransform= 'uppercase'
                   // fontWeight="bold"
                 >
                   5434 King Avenue Pennsauken NJ 09109
@@ -202,6 +206,7 @@ export function ContactPage() {
           Schedule Online
         </Button>
       </Box>
+      <br/>
     </Container>
   );
 }
