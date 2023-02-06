@@ -10,10 +10,10 @@ import {
   Typography,
 } from "@mui/material";
 
-import a from "../a.png";
-import b from "../b.png";
-import c from "../c.png";
-import d from "../d.png";
+import a from "../cavJ.png";
+import b from "../radJ.png";
+import c from "../laseJ.png";
+import d from "../woodJ.png";
 import { QuestContact } from "../QuestContact";
 
 // const servicesCard = [
@@ -67,7 +67,7 @@ export function ServicesPage() {
         <QuestContact />
 
         <Card sx={{ display: "flex", flexDirection: "column" }}>
-          <CardMedia image={a} component="img" sx={{ width: 151 }} />
+          <CardMedia image={a} component="img" sx={{ width: 250 }} />
 
           <CardContent>
             <Typography
@@ -92,7 +92,12 @@ export function ServicesPage() {
                 <Button
                   href="https://bodybyjaya.as.me/schedule.php"
                   variant="contained"
-                  sx={{ backgroundColor: "#101010" }}
+                  sx={{
+                    backgroundColor: "#101010",
+                    "&:hover": {
+                      backgroundColor: "#a2a2a2",
+                    },
+                  }}
                 >
                   Schedule today
                 </Button>
@@ -111,7 +116,7 @@ export function ServicesPage() {
           </Typography> */}
           {/* <Divider sx={{ marginBottom: 3 }} /> */}
 
-          <CardMedia image={b} component="img" sx={{ width: 151 }} />
+          <CardMedia image={c} component="img" sx={{ width: 250 }} />
           <CardContent>
             <Typography
               color="textPrimary"
@@ -133,7 +138,12 @@ export function ServicesPage() {
                 <Button
                   href="https://bodybyjaya.as.me/schedule.php"
                   variant="contained"
-                  sx={{ backgroundColor: "#101010" }}
+                  sx={{
+                    backgroundColor: "#101010",
+                    "&:hover": {
+                      backgroundColor: "#a2a2a2",
+                    },
+                  }}
                 >
                   Schedule today
                 </Button>
@@ -142,8 +152,9 @@ export function ServicesPage() {
             </div>
           </CardContent>
 
-          <CardMedia image={c} component="img" sx={{ width: 151 }} />
           <CardContent>
+            <CardMedia image={b} component="img" sx={{ width: 250 }} />
+
             <Typography
               color="textPrimary"
               // variant="h4"
@@ -165,7 +176,12 @@ export function ServicesPage() {
                 <Button
                   href="https://bodybyjaya.as.me/schedule.php"
                   variant="contained"
-                  sx={{ backgroundColor: "#101010" }}
+                  sx={{
+                    backgroundColor: "#101010",
+                    "&:hover": {
+                      backgroundColor: "#a2a2a2",
+                    },
+                  }}
                 >
                   Schedule today
                 </Button>
@@ -173,7 +189,7 @@ export function ServicesPage() {
               {/* <InstagramIcon sx={{ color: "#0d0f11" }} /> */}
             </div>
           </CardContent>
-          <CardMedia image={d} component="img" sx={{ width: 151 }} />
+          <CardMedia image={d} component="img" sx={{ width: 250 }} />
           <CardContent>
             <Typography
               color="textPrimary"
@@ -232,7 +248,12 @@ export function ServicesPage() {
               <Button
                 href="https://bodybyjaya.as.me/schedule.php"
                 variant="contained"
-                sx={{ backgroundColor: "#101010" }}
+                sx={{
+                  backgroundColor: "#101010",
+                  "&:hover": {
+                    backgroundColor: "#a2a2a2",
+                  },
+                }}
               >
                 Schedule today
               </Button>
