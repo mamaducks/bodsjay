@@ -5,7 +5,6 @@ import {
   ListItemText,
   Drawer,
   IconButton,
-  Button,
 } from "@mui/material";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { useState } from "react";
@@ -39,11 +38,15 @@ export function AppBarButton() {
                 alignItems: "center",
                 justifyContent: "center",
                 alignSelf: "center",
+                fontFamily: "Oswald",
               }}
             >
               <ListItem disableGutters>
                 <ListItemButton href="/">
-                  <ListItemText> Home</ListItemText>
+                  <ListItemText
+                    primary="Home"
+                    primaryTypographyProps={{ fontFamily: "Oswald" }}
+                  />
 
                   <ChevronRightIcon />
                 </ListItemButton>
@@ -51,7 +54,10 @@ export function AppBarButton() {
 
               <ListItem disableGutters>
                 <ListItemButton href="/services">
-                  <ListItemText> Treatments</ListItemText>
+                  <ListItemText
+                    primary="Treatments"
+                    primaryTypographyProps={{ fontFamily: "Oswald" }}
+                  />
 
                   <ChevronRightIcon />
                 </ListItemButton>
@@ -59,28 +65,37 @@ export function AppBarButton() {
 
               <ListItem disableGutters>
                 <ListItemButton href="/reviews">
-                  <ListItemText> Reviews</ListItemText>
+                  <ListItemText
+                    primaryTypographyProps={{ fontFamily: "Oswald" }}
+                    primary="Reviews"
+                  />
 
                   <ChevronRightIcon />
                 </ListItemButton>
               </ListItem>
               <ListItem disableGutters>
                 <ListItemButton href="/faq">
-                  <ListItemText> Faq</ListItemText>
+                  <ListItemText
+                    primaryTypographyProps={{ fontFamily: "Oswald" }}
+                    primary="Faq"
+                  />
 
                   <ChevronRightIcon />
                 </ListItemButton>
               </ListItem>
               <ListItem disableGutters>
                 <ListItemButton href="/contact">
-                  <ListItemText> Contact</ListItemText>
+                  <ListItemText
+                    primaryTypographyProps={{ fontFamily: "Oswald" }}
+                    primary="Contact"
+                  />
 
                   <ChevronRightIcon />
                 </ListItemButton>
               </ListItem>
-              <Box style={{ display: "flex", alignSelf: "center" }}>
-                <Button>Close</Button>
-              </Box>
+              {/* <Box style={{ display: "flex", alignSelf: "center" }}>
+          <Button onClick={handleClose}>Close</Button>
+              </Box> */}
             </Grid>
           </Grid>
         </Box>
