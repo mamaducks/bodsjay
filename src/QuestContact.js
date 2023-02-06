@@ -1,30 +1,46 @@
 import { Box } from "@mui/system";
-import { CardContent, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
 export function QuestContact() {
   return (
-    <Box display="flex" justifyContent="center">
-      <CardContent
+    <Box display="flex" justifyContent="center" alignItems="center">
+      {/* <CardContent
       // style={{ padding: "0px" }}
+      
+      > */}
+      <Typography
+        // color="#fefefe"
+        variant="body1"
+        gutterBottom
+        fontFamily="Oswald"
+        style={{ alignItems: "center", flexWrap: "nowrap" }}
       >
-        <Typography
-          // color="#fefefe"
-          variant="body1"
-          gutterBottom
-          style={{ alignItems: "center", flexWrap: "nowrap" }}
-        >
-          Have Questions? Contact us today. We'd
-          <FavoriteIcon
-            // fontSize="1.1rem"
-            // color="#a71976"
-            style={{ paddingInline: "8px", textAlign: "center" }}
-          />
-          to hear from you!
-        </Typography>
+        Have Questions? Contact us today. We'd
+      </Typography>
 
-        {/* <Divider /> */}
-      </CardContent>
+      <FavoriteIcon
+        // fontSize="1.1rem"
+        // color="#a71976"
+        style={{
+          paddingInline: "8px",
+          textAlign: "center",
+          display: "flex",
+          paddingBottom: 5,
+        }}
+      />
+      <Typography
+        // color="#fefefe"
+        variant="body1"
+        gutterBottom
+        fontFamily="Oswald"
+        style={{ alignItems: "center", flexWrap: "nowrap" }}
+      >
+        to hear from you!
+      </Typography>
+
+      {/* <Divider /> */}
+      {/* </CardContent> */}
     </Box>
   );
 }
