@@ -10,7 +10,6 @@ import {
   Button,
   Card,
   CardContent,
-  CardMedia,
   Dialog,
   Divider,
   Grid,
