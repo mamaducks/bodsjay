@@ -122,7 +122,12 @@ export function Footer() {
               href="https://bodybyjaya.as.me/schedule.php"
               variant="contained"
               size="small"
-              sx={{ backgroundColor: "#101010" }}
+              sx={{
+                backgroundColor: "#101010",
+                "&:hover": {
+                  backgroundColor: "#a2a2a2",
+                },
+              }}
             >
               Book an Appointment
             </Button>
