@@ -66,50 +66,64 @@ export function ContactPage() {
               Our Hours
             </Typography>
             <Stack direction="row" gap={2} sx={{ mt: 2 }}>
-              <Typography color="textPrimary" gutterBottom>
+              <Typography color="textPrimary" gutterBottom fontFamily="Oswald">
                 Monday:
               </Typography>
-              <Typography color="textSecondary">Closed</Typography>
+              <Typography color="textSecondary" fontFamily="Oswald">
+                Closed
+              </Typography>
             </Stack>
 
             <Stack direction="row" gap={2}>
-              <Typography color="textPrimary" gutterBottom>
+              <Typography color="textPrimary" gutterBottom fontFamily="Oswald">
                 Tuesday:
               </Typography>
-              <Typography color="textSecondary">Closed</Typography>
+              <Typography color="textSecondary" fontFamily="Oswald">
+                Closed
+              </Typography>
             </Stack>
 
             <Stack direction="row" gap={2}>
-              <Typography color="textPrimary" gutterBottom>
+              <Typography color="textPrimary" gutterBottom fontFamily="Oswald">
                 Wednesday:
               </Typography>
-              <Typography color="textSecondary">3pm - 7pm</Typography>
+              <Typography color="textSecondary" fontFamily="Oswald">
+                3pm - 7pm
+              </Typography>
             </Stack>
             <Stack direction="row" gap={2}>
-              <Typography color="textPrimary" gutterBottom>
+              <Typography color="textPrimary" gutterBottom fontFamily="Oswald">
                 Thursday:
               </Typography>
-              <Typography color="textSecondary">4pm - 7pm</Typography>
+              <Typography color="textSecondary" fontFamily="Oswald">
+                4pm - 7pm
+              </Typography>
             </Stack>
 
             <Stack direction="row" gap={2}>
-              <Typography color="textPrimary" gutterBottom>
+              <Typography color="textPrimary" gutterBottom fontFamily="Oswald">
                 Friday:
               </Typography>
-              <Typography color="textSecondary">9am - 3pm</Typography>
+              <Typography color="textSecondary" fontFamily="Oswald">
+                9am - 3pm
+              </Typography>
             </Stack>
             <Stack direction="row" gap={2}>
-              <Typography color="textPrimary" gutterBottom>
+              <Typography color="textPrimary" gutterBottom fontFamily="Oswald">
                 Saturday:
               </Typography>
-              <Typography color="textSecondary">9am - 3pm</Typography>
+              <Typography color="textSecondary" fontFamily="Oswald">
+                9am - 3pm
+              </Typography>
             </Stack>
 
             <Stack direction="row" gap={2}>
-              <Typography color="textPrimary" gutterBottom>
+              <Typography color="textPrimary" gutterBottom fontFamily="Oswald">
                 Sunday:
               </Typography>
-              <Typography color="textSecondary">9am - 3pm</Typography>
+              <Typography color="textSecondary" fontFamily="Oswald">
+                9am - 3pm
+              </Typography>
             </Stack>
           </div>
 
@@ -121,12 +135,16 @@ export function ContactPage() {
             <Box alignSelf="center">
               <Stack direction="row" gap={1} sx={{ mt: 2 }}>
                 <PhoneAndroidIcon />
-                <Typography variant="body1">1-856-357-5954</Typography>
+                <Typography variant="body1" fontFamily="Oswald">
+                  1-856-357-5954
+                </Typography>
               </Stack>
 
               <Stack direction="row" sx={{ mt: 2 }} gap={1}>
                 <EmailIcon />
-                <Typography variant="body1">bodybyjaya@gmail.com</Typography>
+                <Typography variant="body1" fontFamily="Oswald">
+                  bodybyjaya@gmail.com
+                </Typography>
               </Stack>
 
               <Stack direction="row" sx={{ mt: 2 }} gap={1}>
@@ -134,7 +152,9 @@ export function ContactPage() {
                   <FacebookIcon sx={{ color: "#0d0f11" }} />
                 </a>
 
-                <Typography variant="body1">@bodybyjaya</Typography>
+                <Typography variant="body1" fontFamily="Oswald">
+                  @bodybyjaya
+                </Typography>
               </Stack>
 
               <Stack direction="row" sx={{ mt: 2 }} gap={1}>
@@ -144,7 +164,9 @@ export function ContactPage() {
                 >
                   <InstagramIcon sx={{ color: "#0d0f11" }} />
                 </a>
-                <Typography variant="body1">@bodybyjaya</Typography>
+                <Typography variant="body1" fontFamily="Oswald">
+                  @bodybyjaya
+                </Typography>
               </Stack>
 
               <Stack direction="row" sx={{ mt: 2 }} gap={1}>
@@ -153,8 +175,9 @@ export function ContactPage() {
                   color="textPrimary"
                   variant="body1"
                   gutterBottom
-                  fontFamily="Dosis"
-                  fontWeight="bold"
+                  // fontFamily="Dosis"
+                  fontFamily="Oswald"
+                  // fontWeight="bold"
                 >
                   5434 King Avenue Pennsauken NJ 09109
                 </Typography>
@@ -169,7 +192,12 @@ export function ContactPage() {
           href="https://bodybyjaya.as.me/schedule.php"
           variant="contained"
           size="small"
-          sx={{ backgroundColor: "#101010" }}
+          sx={{
+            backgroundColor: "#101010",
+            "&:hover": {
+              backgroundColor: "#a2a2a2",
+            },
+          }}
         >
           Schedule Online
         </Button>
