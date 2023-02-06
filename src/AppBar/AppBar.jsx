@@ -123,22 +123,31 @@ export function AppBarMedia() {
         <Stack
           direction="row"
           justifyContent="space-evenly"
-          sx={{ bgcolor: "#f4f4f4" }}
+          sx={{ bgcolor: "#f4f4f4", fontFamily: "Oswald" }}
         >
-          <Button sx={{ color: "#101010" }} href="/">
+          <Button sx={{ color: "#101010", fontFamily: "Oswald" }} href="/">
             Home
           </Button>
-          <Button sx={{ color: "#101010" }} href="/services">
+          <Button
+            sx={{ color: "#101010", fontFamily: "Oswald" }}
+            href="/services"
+          >
             Treatments
           </Button>
-          <Button sx={{ color: "#101010" }} href="/reviews">
+          <Button
+            sx={{ color: "#101010", fontFamily: "Oswald" }}
+            href="/reviews"
+          >
             Reviews
           </Button>
-          <Button sx={{ color: "#101010" }} href="Faq">
+          <Button sx={{ color: "#101010", fontFamily: "Oswald" }} href="Faq">
             Faqs
           </Button>
 
-          <Button sx={{ color: "#101010" }} href="/contact">
+          <Button
+            sx={{ color: "#101010", fontFamily: "Oswald" }}
+            href="/contact"
+          >
             Contact Us
           </Button>
         </Stack>
