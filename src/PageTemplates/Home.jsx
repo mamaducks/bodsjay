@@ -10,6 +10,7 @@ import {
   Button,
   Card,
   CardContent,
+  CardMedia,
   Dialog,
   Divider,
   Grid,
@@ -252,7 +253,7 @@ export function HomePage() {
                 style={{
                   margin: "8px",
                   cursor: "pointer",
-                  height: 290,
+                  height: 305,
                   width: "100%",
                 }}
               >
@@ -270,7 +271,10 @@ export function HomePage() {
                   height={150}
                   title={header}
                 /> */}
-                <img alt="" src={image} width="100%" height="180px" />
+                {/* <img alt="" src={image} width="100%" height="180px" /> */}
+                <Box display="flex" justifyContent="center" pt={2}>
+        <CardMedia image={image} component="img" sx={{ width: 290 }} />
+      </Box>
                 <CardContent
                   sx={{
                     // alignItems: "stretch",
